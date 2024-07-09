@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainPage</title>
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
     <style>
         * {
             font-family: sans-serif;
@@ -79,6 +80,7 @@
             #header_bottom {
                 margin: 0 auto;
                 width: 100%;
+                max-width: 1000px;
                 /* border: 1px solid blue; */
             }
             #logo {
@@ -234,13 +236,16 @@
              <!-- 카트랑 검색 -->
             <style>
                 #cart {
+                    width: 100%;
+                    max-width: 1000px;
+                    min-width: 700px;
                     position: absolute;
                     top: 140px;
-                    right: 0;
                 }
                 #cart >.search {
+                    position: absolute;
+                    right: 1%;
                     margin: 0 10px;
-                    float: right;
                 }
                 #cart>.search>a {
                     margin: 0 10px;
@@ -257,6 +262,8 @@
     <!-- 헤더 검색 ~ 밑줄 -->
 
     <!-- 본문영역 -->
+    <div id="main">
+     <!-- 슬라이드 이미지 시작 -->
      <style>
         #main {
             width: 100%;
@@ -273,28 +280,25 @@
         #main_slide>ul {
             display: flex;
             left: 0;
-            transition: left 0.5 ease;
+            transition: left 0.5s ease;
         }
         #main_slide>ul>li {
             margin-right: 30px;
         }
         #main_slide>ul>li>a {
-            /* max-width: 1000px; */
             width: 100%;
             display: block;
         }
         #main_slide>ul>li>a>img {
             max-width: 1000px;
-            /* width: 100%; */
             display: block;
         }
 
-        .control_pannel {
+        .control_panel {
             position: absolute;
             display: flex;
             bottom: 20px;
             left: 50%;
-            
         }
         .control_btn {
             margin: 0 3px;
@@ -307,29 +311,104 @@
             background-color: rgba(255, 255, 255, 0);
             border: 1px solid white;
         }
-
         .slide_btn {
             position: absolute;
             top: 50%;
             max-width: 1000px;
             width: 100%;
             justify-content: space-between;
-            display: flex
+            display: flex;
         }
         .leftBtn>img {
             transform: rotate(-90deg);
             margin-left: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
         .rightBtn>img {
             transform: rotate(90deg);
             margin-right: 30px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
         }
      </style>
-     <div id="main">
+     <!-- <script>
+        function initSlider() {
+            const $sliderPanel = $('.slider_panel')
+            const $controlBtn = $('.control_btn')
+            const $leftBtn = $('.leftBtn img')
+            const $rightBtn = $('.rightBtn img')
+
+            let currentIndex = 0;
+
+            function updateSlider(index) {
+                $sliderPanel.css('left',`-${index * 1000}%`);
+                $controlBtn.removeClass('btn_check');
+                $controlBtn.eq(index).addClass('btn_check');
+            }
+            $leftBtn.on('click', function(){
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = 0 ;
+                }
+                updateSlider(currentIndex);
+            });
+            $rightBtn.on('click', function(){
+                currentIndex++;
+                if (currentIndex < 5) {
+                    currentIndex = 5 ;
+                }
+                updateSlider(currentIndex);
+            });
+            $controlBtn.on('click', function(){
+                currentIndex = parseInt($(this).data('index'));
+                updateSlider(currentIndex);
+            });
+            setInterval(function(){
+                currentIndex = (currentIndex +1 )% $controlBtn.length;
+                updateSlider(currentIndex);
+            },3000);
+        }
+     </script> -->
+     <!-- <script>
+        $(function(){
+            $('.leftBtn').on('click',function(){
+                $('.slider_panel').css('left','-1000px')
+            });
+        });
+        let totalImg = $('.slider_panel img').length;
+        let currentIndex = 0;
+
+        function nextSlide() {
+            let next = (currentIndex + 1) % totalImg;
+            $('.slider_panel img').eq(currentIndex).css('margin-left','1000px');
+            $('.slider_panel img').eq(next).css('margin-left','-1000px');
+            currentIndex=next;
+        }
+        setInterval(nextSlide,3000);
+     </script> -->
+     <script>
+        $(document).ready(function() {
+            var slideIndex = 0;
+            var slidesCount = $('#main_slide > ul > li').length;
+            var slideWidth = $('#main_slide > ul > li').outerWidth();
+            var maxOffset = -(slidesCount - 1) * slideWidth;
+            
+            // 좌측 버튼 클릭 시
+            $('.leftBtn').click(function() {
+                slideIndex = (slideIndex === 0) ? slidesCount - 1 : slideIndex - 1;
+                var offset = -slideIndex * slideWidth;
+                $('#main_slide > ul').css('left', offset + 'px');
+            });
+
+            // 우측 버튼 클릭 시
+            $('.rightBtn').click(function() {
+                slideIndex = (slideIndex === slidesCount - 1) ? 0 : slideIndex + 1;
+                var offset = -slideIndex * slideWidth;
+                $('#main_slide > ul').css('left', offset + 'px');
+            });
+        });
+    </script>
         <div id="main_slide">
-            <ul>
+            <ul class="slider_panel">
                 <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
@@ -337,7 +416,7 @@
                 <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
             </ul>
-            <div class="control_pannel">
+            <div class="control_panel">
                 <div class="control_btn btn_check" data-index="0"></div>
                 <div class="control_btn" data-index="1"></div>
                 <div class="control_btn" data-index="2"></div>
@@ -347,6 +426,7 @@
                 <div class="rightBtn"><img src="images/svg/btn_quick_top.svg" alt=""></div>
             </div>
         </div>
+        <!-- 본문영역 1 슬라이드 이미지 끝 -->
         <div id="main_best"></div>
         <div class="mainBanner"></div>
         <div id="main_rec"></div>
