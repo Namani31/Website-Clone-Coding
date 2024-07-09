@@ -1,11 +1,11 @@
 <!-- header.html -->
 <header>
     <!-- 메인 배너 콘텐츠 시작 -->
-    <div id="main-banner-content">
+    <div id="main-banner-content" class="header">
 
         <!-- 프로모션 배너 시작 -->
         <div class="promotion-banner">
-            <a href="#">
+            <a href="#" class="a">
                 <div class="image-container">
                     <img src="/images/2c8f696ba5f27ed5c5950f5660c53a79.jpg" alt="카카오 채널 추가 시 할인 쿠폰 지급">
                     <span class="promo-text">카카오 채널 추가 시 할인 쿠폰 지급</span>
@@ -19,14 +19,14 @@
 
     <!--로그인 메뉴 시작 -->
     <div class="rnb-login-layout">
-        <p id="login"><a href="login.html">로그인</a></p>
-        <p id="sign-up"><a href="sign-up.html">회원가입</a></p>
-        <p id="cs-center"><a href="cs-center.html">고객센터</a></p>
+        <p id="login"><a href="login.html" class="a">로그인</a></p>
+        <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
+        <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
     </div>
     <!-- 로그인 메뉴 끝 -->
 
     <!-- 메인 로고 시작 -->
-    <img src="images/title_logo.png" alt="메인 로고">
+    <a href="#" class="a"><img src="images/title_logo.png" alt="메인 로고"></a>
     <!--메인 로고 끝  -->
 
     <!-- 리스트 메뉴 시작 -->
