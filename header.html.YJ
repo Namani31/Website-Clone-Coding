@@ -1,10 +1,40 @@
 <!-- header.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <style>
+        span {
+            color: white;
+            font-weight: bold;
+        }
+
+        .a {
+            text-decoration: none;
+        }
+
+        .image-container {
+            position: relative;
+        }
+
+        .promotion-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .promotion-content-text {
+            margin-right: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -17,9 +47,11 @@
                 <a href="#" class="a">
                     <div class="image-container">
                         <img src="/images/2c8f696ba5f27ed5c5950f5660c53a79.jpg" alt="카카오 채널 추가 시 할인 쿠폰 지급">
-                        <span class="promo-text">카카오 채널 추가 시 할인 쿠폰 지급</span>
+                        <div class="promotion-content">
+                            <span class="promotion-content-text">카카오 채널 추가 시 할인 쿠폰 지급</span>
+                            <img src="/images/m_ic_top_bn.png" class="coupon-logo" alt="쿠폰 로고">
+                        </div>
                     </div>
-                    <img src="/images/m_ic_top_bn.png" class="coupon-logo" alt="쿠폰 로고">
                 </a>
             </div>
             <!-- 프로모션 배너 끝 -->
