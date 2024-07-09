@@ -6,3 +6,11 @@ body{
     color: #353535;
     font: 0.75em;
 }
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
+}
