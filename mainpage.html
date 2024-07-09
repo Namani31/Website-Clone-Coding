@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mainPage</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        * {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        ul,li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            text-align: center;
+        }
+        #header {
+            /* border: 1px solid orange; */
+            width: 100%;
+            z-index: 9;
+            background-color: white;
+            position: fixed;
+            /* overflow: hidden; */
+        }
+        </style>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <div id="header">
+        
+        <!-- 헤더 상단 -->
+        
+        <style>
+            #header_top {
+                width: 100%;
+                position: relative;
+            }
+            #header_top .topBannerImg {
+                height: 40px;
+                width: 100%;
+            }
+            #header_top>a {
+                text-align: center;
+                color: black;
+            }
+            #header_top>a>span {
+                position: absolute;
+                top: 0;
+                left: 40%;
+                font-size: 14px;
+                color: #fff;
+                font-weight: 500;
+                line-height: 40px;
+            }
+            #header_top span:hover {
+                color: skyblue;
+            }
+            #header_top>a>span>img {
+                transform: translate(0, 32%);
+            }
+            </style>
+
+        <div id="header_top">
+            <a href="#">
+                <img src="images/2c8f696ba5f27ed5c5950f5660c53a79.jpg" alt="로딩" class="topBannerImg">
+                <span>카카오채널 추가시 할인쿠폰 지급
+                    <img src="images/m_ic_top_bn.png" alt="쿠폰">
+                </span>
+            </a>
+        </div>
+        
+        <!-- 헤더 상단 끝/ 헤더 로그인 -->
+        
+        <style>
+            #header_bottom {
+                margin: 0 auto;
+                width: 100%;
+                /* border: 1px solid blue; */
+            }
+            #logo {
+                /* border: #555 1px solid; */
+                text-align: center;
+                margin: 15px 0;
+            }
+            
+            #header_login {
+                overflow: hidden;
+                margin: 0 10px;
+                font-size: 13px;
+                /* border: 1px solid pink; */
+            }
+            #header_login span{
+                color: #ccc;
+                float: right;
+                
+            }
+            #header_login a {
+                float: right;
+                font-weight: 600;
+                color: #555;
+            }
+
+        </style>
+        <div id="header_bottom">
+            <div id="header_login">
+                <a href="#" class="login">로그인</a>
+                <span>ㅣ</span>
+                <a href="#" class="login">회원가입</a>
+                <span>ㅣ</span>
+                <a href="#" class="login">고객센터</a>
+            </div>
+            <div id="logo"><img src="images/title_logo.png" alt=""></div>
+         
+            <!-- 헤더로그인끝 -->
+         <!-- 헤더 네비 시작 -->
+         <style>
+                
+            #header_gnb {
+                position: relative;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            #main_gnb {
+                /* border: 1px solid palevioletred; */
+                display: flex;
+                /* float: left; */
+                margin: 0 auto;
+                padding: 0;
+                width: 600px;
+            }
+
+            #main_gnb>li {
+                position: relative;
+                /* margin: 0 auto; */
+            }
+            #main_gnb>li>a {
+                /* border: 1px solid saddlebrown; */
+                display: block;
+                padding: 5px 5px;
+                font-size: 18px;
+                font-weight: 800;
+                color: #444;
+                width: 80px;
+            }
+            #main_gnb>li>a:hover {
+                color: #2af;
+            }
+            #main_gnb>div {
+                color: #555;
+                font-weight: 700px;
+                line-height: 30px;
+            }
+            .gnb {
+                width: 85px;
+                /* margin-left: 2px; */
+                padding: 2px;
+                display: none;
+                z-index: 10;
+                /* border: 1px solid black; */
+                font-size: 13px;
+                font-weight: 400;
+                background-color: rgba(255, 255, 255, 0.5);
+                position: absolute;
+            }
+            .gnb>li>a {
+                margin: 10px;
+                color: #222;
+            }
+            .line {
+                border-bottom: 1px solid #ccc;
+            }
+            </style>
+
+            <script>
+                $(function(){
+                    $('#main_gnb>li>a').on('click',function(){
+                        $('.gnb').css('display','block');
+                    });
+                });
+            </script>
+
+            <div id="header_gnb">
+                <ul id="main_gnb">
+                    <li><a href="#">브랜드</a></li>
+                    <div>/</div>
+                    <li><a href="#">all</a></li>
+                    <div>/</div>
+                    <li>
+                    <a href="#">바스</a>
+                        <ul class="gnb">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">샤워기</a></li>
+                            <li><a href="#">싱크대</a></li>
+                            <li><a href="#">세면대</a></li>
+                            <li><a href="#">필터</a></li>
+                        </ul>
+                    </li>
+                    <div>/</div>
+                    <li>
+                    <a href="#">주방용품</a>
+                        <ul class="gnb">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">도마</a></li>
+                            <li><a href="#">식기건조대</a></li>
+                        </ul>
+                    </li>
+                    <div>/</div>
+                    <li>
+                    <a href="#">리빙</a>
+                        <ul class="gnb">
+                            <li><a href="#">ALL</a></li>
+                            <li><a href="#">매트리스</a></li>
+                            <li><a href="#">토퍼</a></li>
+                            <li><a href="#">베게</a></li>
+                        </ul>    
+                    </li>
+                    <div>/</div>
+                    <li>
+                    <a href="#">CS</a>
+                        <ul class="gnb">
+                            <li><a href="#">QNA</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 헤더네비끝~~ -->
+             <!-- 카트랑 검색 -->
+            <style>
+                #cart {
+                    position: absolute;
+                    top: 145px;
+                    right: 0;
+                }
+                #cart >.search {
+                    margin: 0 10px;
+                    /* color: black; */
+                    float: right;
+                    /* position: absolute; */
+                    /* display: flex; */
+                background-color: #555;
+                }
+                #cart>.search>a {
+                    margin: 0 10px;
+                }
+            </style>
+            <div id="cart">
+                <div class="search">
+                    <a href=""><img src="images/ic_header_search2.png" alt=""></a>
+                <a href=""><img src="images/ic_cart_off.png" alt=""></a></div>
+            </div>
+        </div>
+        <div class="line"></div>
+    </div>
+    <!-- 헤더 검색 ~ 밑줄 -->
+
+    <!-- 본문영역 -->
+     <style>
+        #main {
+            width: 100%;
+            margin: 0 auto;
+            padding-top: 184px;
+            position: relative;
+        }
+        #main_slide {
+            /* width: 100%; */
+            margin: 30px;
+            overflow: hidden;
+        }
+        #main_slide>ul {
+            display: flex;
+            position: relative;
+            left: 0;
+            transition: left 0.5 ease;
+        }
+        #main_slide>ul>li {
+            min-width: 100%;
+        }
+        #main_slide>ul>li>img {
+            max-width: 1000px;
+            width: 100%;
+            display: block;
+        }
+
+        .control_pannel {
+            position: absolute;
+            display: flex;
+            bottom: 50px;
+            left: 50%;
+            
+        }
+        .control_btn {
+            margin: 0 3px;
+            width: 13px;
+            height: 13px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+        .btn_check {
+            background-color: rgba(255, 255, 255, 0);
+            border: 1px solid white;
+        }
+     </style>
+     <div id="main">
+        <div id="main_slide">
+            <ul>
+                <li><a href=""><img src="images/main_slide_01.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/main_slide_02.jpg" alt=""></a></li>
+                <li><a href=""><img src="images/main_slide_03.jpg" alt=""></a></li>
+            </ul>
+            <div class="control_pannel">
+                <div class="control_btn btn_check" data-index="0"></div>
+                <div class="control_btn" data-index="1"></div>
+                <div class="control_btn" data-index="2"></div>
+            </div>
+            <div class="slide_btn">
+                <div class="leftBtn"><img src="" alt=""></div>
+                <div class="rightBtn"><img src="" alt=""></div>
+            </div>
+        </div>
+        <div id="main_best"></div>
+        <div class="mainBanner"></div>
+        <div id="main_rec"></div>
+        <div id="main_new"></div>
+        <div id="main_review"></div>
+     </div>
+
+    <!-- 하단영역 -->
+</body>
+</html>
