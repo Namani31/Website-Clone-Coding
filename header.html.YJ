@@ -42,10 +42,11 @@
             display: flex;
             justify-content: flex-end;
             gap: 20px;
-            align-items: center; /* 컨테이너 내의 모든 요소를 수직으로 가운데 정렬*/
+            align-items: center;
+            /* 컨테이너 내의 모든 요소를 수직으로 가운데 정렬*/
         }
-        
-        .rnb-login-layout > p {
+
+        .rnb-login-layout>p {
             margin-top: 10px;
             position: relative;
             display: flex;
@@ -53,7 +54,7 @@
         }
 
         /*  */
-        .rnb-login-layout > p:not(:last-child)::after {
+        .rnb-login-layout>p:not(:last-child)::after {
             content: "";
             display: inline-block;
             width: 1px;
@@ -65,13 +66,18 @@
             transform: translateY(-50%);
         }
 
-        .rnb-login-layout > a {
+        .rnb-login-layout>a {
             text-decoration: none;
         }
 
-        .rnb-login-layout > p > a {
+        .rnb-login-layout>p>a {
             color: black;
             font-size: 12px;
+        }
+
+        .main-logo-layout {
+            text-align: center;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -106,7 +112,11 @@
         <!-- 로그인 메뉴 끝 -->
 
         <!-- 메인 로고 시작 -->
-        <a href="#" class="a"><img src="images/title_logo.png" alt="메인 로고"></a>
+        <div class="main-logo-layout">
+            <a href="#" class="a">
+                <img src="images/title_logo.png" alt="메인 로고">
+            </a>
+        </div>
         <!--메인 로고 끝  -->
 
         <!-- 리스트 메뉴 시작 -->
