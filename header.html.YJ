@@ -20,6 +20,7 @@
 
         .image-container {
             position: relative;
+            width: 100%;
         }
 
         .promotion-content {
@@ -39,11 +40,11 @@
         .rnb-login-layout {
             margin-top: 10px;
             margin-bottom: 10px;
+            margin-right: 20px;
             display: flex;
             justify-content: flex-end;
             gap: 20px;
             align-items: center;
-            /* 컨테이너 내의 모든 요소를 수직으로 가운데 정렬*/
         }
 
         .rnb-login-layout>p {
@@ -79,6 +80,11 @@
             text-align: center;
             margin-bottom: 10px;
         }
+
+        #promo-login-content {
+            width: 1280px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
@@ -103,19 +109,21 @@
         </div>
         <!-- 메인 배너 콘텐츠 끝 -->
 
-        <!--로그인 메뉴 시작 -->
-        <div class="rnb-login-layout">
-            <p class="login"><a href="login.html" class="a">로그인</a></p>
-            <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
-            <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
-        </div>
-        <!-- 로그인 메뉴 끝 -->
+        <div id="promo-login-content">
+            <!--로그인 메뉴 시작 -->
+                <div class="rnb-login-layout">
+                    <p class="login"><a href="login.html" class="a">로그인</a></p>
+                    <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
+                    <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
+                </div>
+                <!-- 로그인 메뉴 끝 -->
 
-        <!-- 메인 로고 시작 -->
-        <div class="main-logo-layout">
-            <a href="#" class="a">
-                <img src="images/title_logo.png" alt="메인 로고">
-            </a>
+                <!-- 메인 로고 시작 -->
+                <div class="main-logo-layout">
+                    <a href="#" class="a">
+                        <img src="images/title_logo.png" alt="메인 로고">
+                    </a>
+                </div>
         </div>
         <!--메인 로고 끝  -->
 
