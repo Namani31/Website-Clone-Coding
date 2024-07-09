@@ -156,33 +156,33 @@
                 line-height: 30px;
             }
             .gnb {
-                width: 85px;
-                /* margin-left: 2px; */
-                padding: 2px;
+                width: 130px;
+                padding: 20px 2px;
                 display: none;
                 z-index: 10;
-                /* border: 1px solid black; */
+                left: -25px;
+                border: 1px solid #444;
                 font-size: 13px;
                 font-weight: 400;
                 background-color: rgba(255, 255, 255, 0.5);
                 position: absolute;
             }
+            .gnb>li {
+                margin-bottom: 10px;
+            }
             .gnb>li>a {
-                margin: 10px;
                 color: #222;
+            }
+            .gnb>li>a:hover {
+                color: #2af;
             }
             .line {
                 border-bottom: 1px solid #ccc;
             }
+            #main_gnb>li:hover> .gnb {
+                display: block;
+            }
             </style>
-
-            <script>
-                $(function(){
-                    $('#main_gnb>li>a').on('click',function(){
-                        $('.gnb').css('display','block');
-                    });
-                });
-            </script>
 
             <div id="header_gnb">
                 <ul id="main_gnb">
@@ -235,16 +235,12 @@
             <style>
                 #cart {
                     position: absolute;
-                    top: 145px;
+                    top: 140px;
                     right: 0;
                 }
                 #cart >.search {
                     margin: 0 10px;
-                    /* color: black; */
                     float: right;
-                    /* position: absolute; */
-                    /* display: flex; */
-                background-color: #555;
                 }
                 #cart>.search>a {
                     margin: 0 10px;
@@ -252,8 +248,8 @@
             </style>
             <div id="cart">
                 <div class="search">
-                    <a href=""><img src="images/ic_header_search2.png" alt=""></a>
-                <a href=""><img src="images/ic_cart_off.png" alt=""></a></div>
+                    <a href=""><img src="images/svg/ic_hd_search.svg" alt=""></a>
+                <a href=""><img src="images/svg/ic_bag.svg" alt=""></a></div>
             </div>
         </div>
         <div class="line"></div>
@@ -264,34 +260,39 @@
      <style>
         #main {
             width: 100%;
-            margin: 0 auto;
             padding-top: 184px;
             position: relative;
         }
         #main_slide {
-            /* width: 100%; */
-            margin: 30px;
-            overflow: hidden;
+            z-index: 0;
+            position: relative;
+            max-width: 1000px;
+            margin: 30px auto;
+            /* overflow: hidden; */
         }
         #main_slide>ul {
             display: flex;
-            position: relative;
             left: 0;
             transition: left 0.5 ease;
         }
         #main_slide>ul>li {
-            min-width: 100%;
+            margin-right: 30px;
         }
-        #main_slide>ul>li>img {
-            max-width: 1000px;
+        #main_slide>ul>li>a {
+            /* max-width: 1000px; */
             width: 100%;
+            display: block;
+        }
+        #main_slide>ul>li>a>img {
+            max-width: 1000px;
+            /* width: 100%; */
             display: block;
         }
 
         .control_pannel {
             position: absolute;
             display: flex;
-            bottom: 50px;
+            bottom: 20px;
             left: 50%;
             
         }
@@ -306,13 +307,35 @@
             background-color: rgba(255, 255, 255, 0);
             border: 1px solid white;
         }
+
+        .slide_btn {
+            position: absolute;
+            top: 50%;
+            max-width: 1000px;
+            width: 100%;
+            justify-content: space-between;
+            display: flex
+        }
+        .leftBtn>img {
+            transform: rotate(-90deg);
+            margin-left: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .rightBtn>img {
+            transform: rotate(90deg);
+            margin-right: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
      </style>
      <div id="main">
         <div id="main_slide">
             <ul>
-                <li><a href=""><img src="images/main_slide_01.jpg" alt=""></a></li>
-                <li><a href=""><img src="images/main_slide_02.jpg" alt=""></a></li>
-                <li><a href=""><img src="images/main_slide_03.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
             </ul>
             <div class="control_pannel">
                 <div class="control_btn btn_check" data-index="0"></div>
@@ -320,8 +343,8 @@
                 <div class="control_btn" data-index="2"></div>
             </div>
             <div class="slide_btn">
-                <div class="leftBtn"><img src="" alt=""></div>
-                <div class="rightBtn"><img src="" alt=""></div>
+                <div class="leftBtn"><img src="images/svg/btn_quick_top.svg" alt=""></div>
+                <div class="rightBtn"><img src="images/svg/btn_quick_top.svg" alt=""></div>
             </div>
         </div>
         <div id="main_best"></div>
