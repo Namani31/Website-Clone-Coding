@@ -170,6 +170,8 @@
         .list-ic-search {
             margin-right: 15px;
         }
+
+        /* TODO: 리스트에 호버했을 시 서브 카테고리 나오도록 하기 */
     </style>
 </head>
 
