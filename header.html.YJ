@@ -54,7 +54,7 @@
             align-items: center;
         }
 
-        /*  */
+        /* 로그인 메뉴 사이 가로 선 */
         .rnb-login-layout>p:not(:last-child)::after {
             content: "";
             display: inline-block;
@@ -73,17 +73,84 @@
 
         .rnb-login-layout>p>a {
             color: black;
-            font-size: 12px;
+            font-size: 13px;
         }
 
         .main-logo-layout {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         #promo-login-content {
             width: 1280px;
             margin: 0 auto;
+        }
+
+        .gnb {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            /*flex 이용해서 가로 정렬 */
+            list-style-type: none;
+        }
+
+        ul>li {
+            position: relative;
+            /* margin-left: 30px; */
+            font-size: 18px;
+        }
+
+        ul > li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            width: 1.5px;
+            height: 14px;
+            background: black;
+            transform: translateY(-50%) rotate(45deg); /* 대각선으로 회전 */
+        }
+
+        ul > li:first-child {
+            margin-left: 0;
+        }
+
+        ul>li:last-child {
+            margin-right: 0;
+        }
+
+        ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #list-brand {
+            margin-right: 70px;
+        }
+
+        #list-all {
+            margin-right: 70px;
+        }
+
+        #list-bath {
+            margin-right: 70px;
+        }
+
+        #list-kitchen {
+            margin-right: 70px;
+        }
+
+        #list-living {
+            margin-right: 70px;
+        }
+
+        #list-cs {
+            margin-right: 70px;
         }
     </style>
 </head>
@@ -111,31 +178,34 @@
 
         <div id="promo-login-content">
             <!--로그인 메뉴 시작 -->
-                <div class="rnb-login-layout">
-                    <p class="login"><a href="login.html" class="a">로그인</a></p>
-                    <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
-                    <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
-                </div>
-                <!-- 로그인 메뉴 끝 -->
+            <div class="rnb-login-layout">
+                <p class="login"><a href="login.html" class="a">로그인</a></p>
+                <p id="sign-up"><a href="sign-up.html" class="a">회원가입</a></p>
+                <p id="cs-center"><a href="cs-center.html" class="a">고객센터</a></p>
+            </div>
+            <!-- 로그인 메뉴 끝 -->
 
-                <!-- 메인 로고 시작 -->
-                <div class="main-logo-layout">
-                    <a href="#" class="a">
-                        <img src="images/title_logo.png" alt="메인 로고">
-                    </a>
-                </div>
+            <!-- 메인 로고 시작 -->
+            <div class="main-logo-layout">
+                <a href="#" class="a">
+                    <img src="images/title_logo.png" alt="메인 로고">
+                </a>
+            </div>
         </div>
         <!--메인 로고 끝  -->
 
         <!-- 리스트 메뉴 시작 -->
-        <ul>
-            <li><a href="#">브랜드</a></li>
-            <li><a href="#">ALL</a></li>
-            <li><a href="#">바스</a></li>
-            <li><a href="#">주방용품</a></li>
-            <li><a href="#">리빙</a></li>
-            <li><a href="#">CS</a></li>
-        </ul>
+        <div class="gnb">
+            <ul>
+                <li id="list-brand"><a href="#">브랜드</a></li>
+                <li id="list-all"><a href="#">ALL</a></li>
+                <li id="list-bath"><a href="#">바스</a></li>
+                <li id="list-kitchen"><a href="#">주방용품</a></li>
+                <li id="list-living"><a href="#">리빙</a></li>
+                <li id="list-cs"><a href="#">CS</a></li>
+            </ul>
+        </div>
+
         <!-- 리스트 메뉴 끝 -->
         <hr>
     </header>
