@@ -86,11 +86,40 @@
             margin: 0 auto;
         }
 
-        .gnb {
+        .gnb ul {
             display: flex;
             justify-content: center;
             align-items: center;
+            list-style-type: none;
             margin: 0;
+            padding: 0;
+        }
+
+        .gnb ul>li {
+            position: relative;
+            font-size: 18px;
+            margin-right: 70px;
+        }
+
+        /* 리스트 사이에 대각선 넣기 */
+        .gnb ul>li:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 80px;
+            width: 1.5px;
+            height: 14px;
+            background: #cde4da;
+            transform: translateY(-50%) rotate(45deg);
+        }
+
+        .gbn ul>li:last-child {
+            margin-right: 0;
+        }
+
+        .gnb ul>li>a {
+            text-decoration: none;
+            color: black;
         }
 
         ul {
@@ -105,18 +134,20 @@
             font-size: 18px;
         }
 
-        ul > li:not(:last-child)::after {
+        ul>li:not(:last-child)::after {
             content: "";
             position: absolute;
             top: 50%;
-            left: 80px;
+            left: calc(100% + 10px);
+            /* 대각선 위치 조정 */
             width: 1.5px;
             height: 14px;
             background: black;
-            transform: translateY(-50%) rotate(45deg); /* 대각선으로 회전 */
+            transform: translateY(-50%) rotate(45deg);
+            /* 대각선으로 회전 */
         }
 
-        ul > li:first-child {
+        ul>li:first-child {
             margin-left: 0;
         }
 
@@ -129,29 +160,6 @@
             color: black;
         }
 
-        #list-brand {
-            margin-right: 70px;
-        }
-
-        #list-all {
-            margin-right: 70px;
-        }
-
-        #list-bath {
-            margin-right: 70px;
-        }
-
-        #list-kitchen {
-            margin-right: 70px;
-        }
-
-        #list-living {
-            margin-right: 70px;
-        }
-
-        #list-cs {
-            margin-right: 70px;
-        }
     </style>
 </head>
 
@@ -197,15 +205,14 @@
         <!-- 리스트 메뉴 시작 -->
         <div class="gnb">
             <ul>
-                <li id="list-brand"><a href="#">브랜드</a></li>
-                <li id="list-all"><a href="#">ALL</a></li>
-                <li id="list-bath"><a href="#">바스</a></li>
-                <li id="list-kitchen"><a href="#">주방용품</a></li>
-                <li id="list-living"><a href="#">리빙</a></li>
-                <li id="list-cs"><a href="#">CS</a></li>
+                <li><a href="#">브랜드</a></li>
+                <li><a href="#">ALL</a></li>
+                <li><a href="#">바스</a></li>
+                <li><a href="#">주방용품</a></li>
+                <li><a href="#">리빙</a></li>
+                <li><a href="#">CS</a></li>
             </ul>
         </div>
-
         <!-- 리스트 메뉴 끝 -->
         <hr>
     </header>
