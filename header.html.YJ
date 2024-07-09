@@ -87,12 +87,14 @@
         }
 
         .gnb ul {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
             list-style-type: none;
             margin: 0;
             padding: 0;
+            overflow: hidden;
         }
 
         .gnb ul>li {
@@ -138,8 +140,8 @@
             content: "";
             position: absolute;
             top: 50%;
-            left: calc(100% + 10px);
-            /* 대각선 위치 조정 */
+            left: 100%;
+            margin-left: 10px;
             width: 1.5px;
             height: 14px;
             background: black;
@@ -160,6 +162,14 @@
             color: black;
         }
 
+        .ic-box {
+            position: absolute;
+            right: 10%;
+            margin-top: -20px;
+        }
+        .list-ic-search {
+            margin-right: 15px;
+        }
     </style>
 </head>
 
@@ -212,6 +222,11 @@
                 <li><a href="#">리빙</a></li>
                 <li><a href="#">CS</a></li>
             </ul>
+            <div class="ic-box">
+                <a href="#" class="list-ic-search"><img src="/images/svg/ic_hd_search.svg" alt=""></a>
+                <a href="#" class="list-ic-bag"><img src="/images/svg/ic_bag.svg" alt=""></a>
+            </div>
+        </div>
         </div>
         <!-- 리스트 메뉴 끝 -->
         <hr>
