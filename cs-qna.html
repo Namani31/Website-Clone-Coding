@@ -138,6 +138,27 @@
             text-align: center;
             vertical-align: middle;
         }
+
+        .cs-bottom-paging {
+            margin: 50px 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-paging-num > a {
+            width: 13px;
+            color: black;
+            font-weight: bold;
+            margin: 1px 5px 0;
+        }
+
+        .cs-paging-btn {
+            clip-path: inset(3px 3px 3px 3px);
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     </style>
 </head>
 
@@ -327,8 +348,23 @@
                         </tbody>
                     </table>
                 </div>
+
+            </div>
+            <div class="cs-bottom-paging">
+                <a href="#">
+                    <img class="cs-paging-btn" src="/images/btn_page_prev.gif" alt="이전 버튼">
+                </a>
+                <ol>
+                    <li class="cs-paging-num">
+                        <a href="#">1</a>
+                    </li>
+                </ol>
+                <a href="#">
+                    <img class="cs-paging-btn" src="/images/btn_page_next.gif" alt="다음 버튼">
+                </a>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
