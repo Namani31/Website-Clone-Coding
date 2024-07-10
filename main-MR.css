@@ -119,19 +119,18 @@ main div.bath {
   color: #333;
   font-weight: 600;
   overflow: hidden;
-  display: block;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
 }
 
-.page-btn a u {
+.page-btn img {
+  vertical-align: top;
+  margin-top: -2px;
+  margin-left: -2px;
+}
+
+.page-btn a {
   display: block;
   text-align: center;
-  /* line-height: 30px; */
-}
-
-#page-btn-1 {
-  padding-right: 12px;
-}
-
-#page-btn-2 {
-  padding-left: 12px;
 }
