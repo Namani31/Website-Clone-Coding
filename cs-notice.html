@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/reset.css">
+
+    <style>
+        body {
+            width: 1480px;
+            margin: 0 auto;
+
+        }
+
+        .wrap {
+            position: relative;
+            width: 100%;
+            margin: 0, auto;
+        }
+
+        .container {
+            width: 1280px;
+            margin: 0 auto;
+            padding-top: 200px;
+        }
+
+        h1 {
+            font-size: 2em;
+            font-weight: bold;
+            padding-bottom: 10px;
+            color: #555555;
+        }
+
+        .notice-title {
+            text-align: center;
+        }
+
+        .notice-title>p {
+            color: #999999;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border-top: 3px solid black;
+            margin-top: 40px;
+            margin-bottom: 5px;
+        }
+
+        .notice-category{
+            display: flex;
+            margin-bottom: 80px;
+            border: 1px solid black;
+        }
+
+        .notice-category > li {
+            margin-right: 20px;
+        }
+
+        .notice-category > li:not(.notice-category-selected) > a {
+            text-decoration: none;
+            color: #333333;
+        }
+        .notice-category-selected > a {
+            width: 320px;
+            height: 60px;
+            line-height: 60px;
+            text-decoration: none;
+            background-color: #00AFFF;
+            color: red;
+            font-size: 16px;
+            display: block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="notice-content">
+                <!-- 공지사항 타이틀 시작 -->
+                <div class="notice-title">
+                    <h1>공지사항</h1>
+                    <p>공지사항입니다.</p>
+                </div>
+                <!-- 공지사항 타이틀 끝-->
+                <hr>
+            </div>
+            <ul class="notice-category">
+                <li class="notice-category-selected">
+                    <a href="#">공지사항</a>
+                </li>
+                <li>
+                    <a href="#">EVENT</a>
+                </li>
+                <li><a href="#">REVIEW</a>
+                </li>
+                <li><a href="#">FAQ</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
