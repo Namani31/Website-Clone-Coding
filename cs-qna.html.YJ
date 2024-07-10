@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pure Sell - QnA</title>
     <link rel="stylesheet" href="/css/reset.css">
-
     <style>
         body {
             width: 1480px;
@@ -94,6 +93,15 @@
             font-size: 12px;
             color: #868e96
         }
+
+        .table-answer {
+            padding-left: 30px;
+
+        }
+
+        .table-icon {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -145,7 +153,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">상품문의</a><img src="" alt="">
+                                    <a href="#">상품문의</a> <img class="table-icon" src="/images/ico_lock.gif" alt="비밀글">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">이****</td>
                                 <td class="date-left">
@@ -158,7 +167,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">베개 커버</a>
+                                    <a href="#">베개 커버</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">정****</td>
                                 <td class="date-left">
@@ -171,7 +181,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">사용 문의</a>
+                                    <a href="#">사용 문의</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -184,7 +195,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">상품 다시 보내주신다고 그러셨는데</a>
+                                    <a href="#">상품 다시 보내주신다고 그러셨는데</a> <img class="table-icon" src="/images/ico_hit.gif"
+                                        alt="HIT"> [1]
                                 </td>
                                 <td class="cs-table-writer">E****</td>
                                 <td class="date-left">
@@ -197,7 +209,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">주방 헤드 호환 문의</a>
+                                    <a href="#">주방 헤드 호환 문의</a> <img class="table-icon" src="/images/ico_hit.gif"
+                                        alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -210,7 +223,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">도마 고리 부분도 휘어지나요?</a>
+                                    <a href="#">도마 고리 부분도 휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif"
+                                        alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -223,7 +237,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">도마 고리 부분도 휘어지나요?</a>
+                                    <img src="images/ico_re.gif" alt="답변"><a href="#" class="table-answer">도마 고리 부분도
+                                        휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">PURESELL 퓨어셀</td>
                                 <td class="date-left">
@@ -249,7 +264,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">가방도 세탁이 되나요?</a>
+                                    <img src="images/ico_re.gif" alt="답변"><a href="#" class="table-answer">가방도 세탁이
+                                        되나요?</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">PURESELL 퓨어셀</td>
                                 <td class="date-left">
