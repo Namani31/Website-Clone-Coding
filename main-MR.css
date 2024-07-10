@@ -134,3 +134,7 @@ main div.bath {
   display: block;
   text-align: center;
 }
+
+.global-toggle {
+  display: block;
+}
