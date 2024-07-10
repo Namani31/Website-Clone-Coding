@@ -31,10 +31,9 @@
         hr {
             display: block;
             height: 1px;
-            border: 0;
             border-top: 3px solid black;
-            margin: 1em 0;
-            padding: 0;
+            margin-top: 40px;
+            margin-bottom: 5px;
         }
 
         /* reset.css로 인해 h1 적용되지 않아 따로 선언 */
@@ -42,6 +41,55 @@
             font-size: 2em;
             font-weight: bold;
             padding-bottom: 10px;
+        }
+
+        .cs-table-header {
+            position: relative;
+            border-bottom: 1px solid #ebebeb;
+            color: #555555;
+            line-height: 1.5;
+
+        }
+
+        .cs-table-header th {
+            text-align: center;
+            padding: 5px;
+        }
+
+        .cs-table-contents {
+            height: 40px;
+            font-size: 14px;
+            background-color: #fff;
+            padding-top: 10px;
+            border-top: 2px solid #eee;
+            border-bottom: 2px solid #eee;
+        }
+
+        .cs-table-contents td {
+            padding-top: 20px;
+        }
+
+        .cs-table-num {
+            text-align: center;
+        }
+
+        .cs-table-contents {
+            padding-left: 10px;
+        }
+
+        .cs-table-contents>a {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .cs-table-writer {
+            text-align: center;
+        }
+
+        .date-left {
+            text-align: center;
+            font-size: 12px;
+            color:#868e96
         }
     </style>
 </head>
@@ -55,12 +103,37 @@
                     <p>QNA입니다.</p>
                 </div>
                 <hr>
-                <table>
-                    <th>번호</th>
-                    <th>상품정보</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
+                <table border="1">
+                    <!-- colgroup으로  테이블 크기 설정-->
+                    <colgroup style="background-color: #fff;">
+                        <col style="width:60px">
+                        <col style="width:190px">
+                        <col style="width:65%">
+                        <col style="width:120px;">
+                        <col style="width:105px;">
+                        </colgroup`>
+                    <thead class="cs-table-header">
+                        <tr>
+                            <th scope="col">번호</th>
+                            <th scope="col">상품정보</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">작성일</th>
+                        </tr>
+                    </thead>
+                    <tbody class="cs-table-contents">
+                        <td class="cs-table-num">10</td>
+                        <td class="thumb-left">
+                            <a href="#"></a>
+                        </td>
+                        <td class="cs-table-contents">
+                            <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
+                        </td>
+                        <td class="cs-table-writer">양****</td>
+                        <td class="date-left">
+                            <span class="text-num">2024-07-10</span>
+                        </td>
+                    </tbody>
                 </table>
             </div>
         </div>
