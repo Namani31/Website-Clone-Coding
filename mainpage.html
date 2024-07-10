@@ -402,6 +402,7 @@
             </div>
         </div>
         <!-- 본문영역 1 슬라이드 이미지 끝 -->
+         <!-- 본문영역 2 베스트상품 -->
          <style>
             #main_best {
                 /* border: 1px solid black; */
@@ -477,7 +478,6 @@
                 opacity: 1;
             }
          </style>
-         <!-- 본문영역 2 베스트상품 -->
         <div id="main_best">
             <h1>BEST PRODUCT</h1>
             <div class="bestList">
@@ -668,7 +668,117 @@
             </div>
         </div>
         <!-- 본문4 추천상품 끝~ -->
-        <div id="main_new"></div>
+         <!-- 본문 5 신상품 시작 -->
+         <style>
+            #main_new {
+                /* border: 1px solid black; */
+                margin: 100px auto;
+                width: 1800px;
+                text-align: center;
+            }
+            #main_new>h1 {
+                font-size: 40px;
+                padding: 20px;
+                /* margin: 20px; */
+            }
+            div.newList {
+                /* width: 100%; */
+                /* margin: 0 auto; */
+                /* border: 1px solid red; */
+                overflow: hidden;
+                padding: 20px;
+            }
+            ul.newImg {
+                float: left;
+                /* border: 1px solid b?lue; */
+                margin: 40px;
+            }
+            .newImg>li {
+                /* border: 1px solid orange; */
+                width: 500px;
+                /* padding: 20px; */
+                margin-bottom: 10px;
+                overflow: hidden;
+                position: relative;
+            }
+            .newImg>li>a>img {
+                width: 500px;
+                height: 500px;
+                z-index: 0;
+            }
+            .newImgText {
+                text-overflow: ellipsis;
+            }
+            .newImgText >a {
+                white-space: nowrap;
+                color: #555;
+                font-size: 22px;
+                font-weight: 600;
+            }
+            .newImg>li>h1 {
+                display: inline;
+                margin-right: 10px;
+                color: #2af;
+            }
+            .newImg>li>s {
+                font-size: 20px;
+                font-weight: 700;
+                color: #aaa;
+            }
+            .newImg>li>a>.listDecoBox {
+                width: 70px;
+                height: 70px;
+                background-color: #2af;
+                text-align: center;
+                line-height: 70px;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                position: absolute;
+                top: 1px;
+                left: 1px;
+                opacity: 0;
+                transition: opacity 0.6s ease-in-out ;
+            }
+            .newImg>li>a:hover .listDecoBox{
+                opacity: 1;
+            }
+         </style>
+        <div id="main_new">
+            <h1>NEW PRODUCT</h1>
+            <div class="newList">
+                <ul class="newImg">
+                    <li><a href="#"><img src="images/new1.PNG" alt="">
+                    <div class="listDecoBox">26%</div>
+                </a></li>
+                    <li class="newImgText"><a href="#">퓨어셀 시그니처 상부장 부착식 물빠짐 식기건조대 싱크대 그릇 설거지 정리대</a></li>
+                    <li>
+                        <h1>62,900원</h1>
+                        <s>84,900원</s>
+                    </li>
+                </ul>
+                <ul class="newImg">
+                    <li><a href="#"><img src="images/new2.PNG" alt="">
+                        <div class="listDecoBox">31%</div>
+                    </a></li>
+                    <li class="newImgText"><a href="#">퓨어셀 칼자국 칼집 안나는 항균 TPU 안심 이유식 도마</a></li>
+                    <li>
+                        <h1>15,900원</h1>
+                        <s>22,900원</s>
+                    </li>
+                </ul>
+                <ul class="newImg">
+                    <li><a href="#"><img src="images/new3.PNG" alt="">
+                        <div class="listDecoBox">31%</div>
+                    </a></li>
+                    <li class="newImgText"><a href="#">퓨어셀 녹슬지 않는 자동배수 깔끔 식기건조대</a></li>
+                    <li>
+                        <h1>31,900원</h1>
+                        <s>45,900원</s>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div id="main_review"></div>
      </div>
 
