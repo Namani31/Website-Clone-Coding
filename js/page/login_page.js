@@ -7,13 +7,27 @@ class LoginPage extends Page{
         if(data != null){
             let tmpData = new PageData(data);
             super(tmpData);
-            this.setData(tmpData);
+            this._setData(tmpData);
         }
     }
 
-    setData(data){
+    // public
+    OpenPage(window){
+        this._openPage(window);
+    }
+    // public 
+
+    // private
+    _setData(data){
         this.m_arrHtmlData = data.m_arrPageHtml;
     }
+
+    _openPage(window){
+        window.append();
+        _createEle();
+
+    }
+    // private
 
 }
 // 클래스 선언부 end
@@ -23,7 +37,9 @@ window.onload = ()=>{
     // let loginPage = new LoginPage(new PageData(LoginPageData));
 
     const loginPage = new LoginPage(LoginPageData);
-    // const CONTENT = document.getElementById('content_window');
+    const CONTENT = document.getElementById('content_window');
+
+    loginPage.OpenPage(CONTENT);
     // let eleMain = createEle('div','id','login_container');
     // let eleMemBox = createEle('div','class','login-tab');
     // let eleNoMemBox = createEle('div','class','login-tab');
