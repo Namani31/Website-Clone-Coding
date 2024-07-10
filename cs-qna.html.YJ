@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/css/reset.css">
 
     <style>
+        body {
+            width: 1480px;
+        }
+
         .wrap {
             position: relative;
             width: 100%;
@@ -61,12 +65,11 @@
             font-size: 14px;
             background-color: #fff;
             padding-top: 10px;
-            border-top: 2px solid #eee;
-            border-bottom: 2px solid #eee;
         }
 
         .cs-table-contents td {
             padding-top: 20px;
+            border-bottom: 1px solid #ebebeb
         }
 
         .cs-table-num {
@@ -103,160 +106,159 @@
                     <p>QNA입니다.</p>
                 </div>
                 <hr>
-                <table border="1">
-                    <!-- colgroup으로  테이블 크기 설정-->
-                    <colgroup style="background-color: #fff;">
-                        <col style="width:60px">
-                        <col style="width:190px">
-                        <col style="width:65%">
-                        <col style="width:120px;">
-                        <col style="width:105px;">
-                        </colgroup`>
-                    <thead class="cs-table-header">
-                        <tr>
-                            <th scope="col">번호</th>
-                            <th scope="col">상품정보</th>
-                            <th scope="col">제목</th>
-                            <th scope="col">작성자</th>
-                            <th scope="col">작성일</th>
-                        </tr>
-                    </thead>
-                    <tbody class="cs-table-contents">
-                        <tr>
-                            <td class="cs-table-num">10</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
-                            </td>
-                            <td class="cs-table-writer">양****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-07-10</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">9</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">상품문의</a>
-                            </td>
-                            <td class="cs-table-writer">이****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-06-07</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">8</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">베개 커버</a>
-                            </td>
-                            <td class="cs-table-writer">정****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-06-01</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">7</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">사용 문의</a>
-                            </td>
-                            <td class="cs-table-writer">김****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-05-31</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">6</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">상품 다시 보내주신다고 그러셨는데</a>
-                            </td>
-                            <td class="cs-table-writer">E****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-05-29</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">5</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">주방 헤드 호환 문의</a>
-                            </td>
-                            <td class="cs-table-writer">김****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-05-12</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">4</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">도마 고리 부분도 휘어지나요?</a>
-                            </td>
-                            <td class="cs-table-writer">김****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-04-29</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">3</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">도마 고리 부분도 휘어지나요?</a>
-                            </td>
-                            <td class="cs-table-writer">PURESELL 퓨어셀</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-04-29</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">2</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">가방도 세탁이 되나요?</a>
-                            </td>
-                            <td class="cs-table-writer">양****</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-04-21</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="cs-table-num">1</td>
-                            <td class="thumb-left">
-                                <a href="#"></a>
-                            </td>
-                            <td class="cs-table-contents">
-                                <a href="#">가방도 세탁이 되나요?</a>
-                            </td>
-                            <td class="cs-table-writer">PURESELL 퓨어셀</td>
-                            <td class="date-left">
-                                <span class="text-num">2024-04-21</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="cs-page-num">
-               <a href="#"><img src="/images/svg/" alt=""></a>
+                <div class="cs-table">
+                    <table border="1">
+                        <!-- colgroup으로  테이블 크기 설정-->
+                        <colgroup style="background-color: #fff;">
+                            <col style="width:60px">
+                            <col style="width:190px">
+                            <col style="width:65%">
+                            <col style="width:120px;">
+                            <col style="width:105px;">
+                            </colgroup`>
+                        <thead class="cs-table-header">
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cs-table-contents">
+                            <tr>
+                                <td class="cs-table-num">10</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
+                                </td>
+                                <td class="cs-table-writer">양****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-07-10</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">9</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">상품문의</a>
+                                </td>
+                                <td class="cs-table-writer">이****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-06-07</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">8</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">베개 커버</a>
+                                </td>
+                                <td class="cs-table-writer">정****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-06-01</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">7</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">사용 문의</a>
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-31</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">6</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">상품 다시 보내주신다고 그러셨는데</a>
+                                </td>
+                                <td class="cs-table-writer">E****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">5</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">주방 헤드 호환 문의</a>
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-05-12</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">4</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">도마 고리 부분도 휘어지나요?</a>
+                                </td>
+                                <td class="cs-table-writer">김****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">3</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">도마 고리 부분도 휘어지나요?</a>
+                                </td>
+                                <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-29</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">2</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">가방도 세탁이 되나요?</a>
+                                </td>
+                                <td class="cs-table-writer">양****</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-21</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cs-table-num">1</td>
+                                <td class="thumb-left">
+                                    <a href="#"></a>
+                                </td>
+                                <td class="cs-table-contents">
+                                    <a href="#">가방도 세탁이 되나요?</a>
+                                </td>
+                                <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                                <td class="date-left">
+                                    <span class="text-num">2024-04-21</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
