@@ -51,7 +51,6 @@
             border-bottom: 1px solid #ebebeb;
             color: #555555;
             line-height: 1.5;
-
         }
 
         .cs-table-header th {
@@ -102,6 +101,32 @@
         .table-icon {
             text-align: center;
         }
+
+        .cs-thumb-img {
+            width: 46px;
+        }
+
+        .thumb-left {
+            padding-top: 12px;
+            padding-left: 10px;
+            padding-bottom: 12px;
+        }
+
+        .thumb-left > a {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .thumb-left > a > span {
+            display: inline-block;
+            width: 100px;
+            height: 32px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow:hidden;
+            text-overflow: ellipsis;
+        }
+        
     </style>
 </head>
 
@@ -119,7 +144,7 @@
                         <!-- colgroup으로  테이블 크기 설정-->
                         <colgroup style="background-color: #fff;">
                             <col style="width:60px">
-                            <col style="width:190px">
+                            <col style="width:250px">
                             <col style="width:65%">
                             <col style="width:120px;">
                             <col style="width:105px;">
@@ -150,10 +175,14 @@
                             <tr>
                                 <td class="cs-table-num">9</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image1.jpg" alt="썸네일 이미지 1">
+                                        <span>퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에 좋은 1인용 디스크 매트릭스 싱글</span>
+                                    </a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">상품문의</a> <img class="table-icon" src="/images/ico_lock.gif" alt="비밀글"> [1]
+                                    <a href="#">상품문의</a> <img class="table-icon" src="/images/ico_lock.gif" alt="비밀글">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">이****</td>
                                 <td class="date-left">
@@ -166,7 +195,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">베개 커버</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
+                                    <a href="#">베개 커버</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">정****</td>
                                 <td class="date-left">
@@ -176,10 +206,12 @@
                             <tr>
                                 <td class="cs-table-num">7</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#"><img class="cs-thumb-img" src="/images/cs-sample-image1.jpg"
+                                            alt="썸네일 이미지 2"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">사용 문의</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
+                                    <a href="#">사용 문의</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -203,7 +235,8 @@
                             <tr>
                                 <td class="cs-table-num">5</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#"><img class="cs-thumb-img" src="/images/cs-sample-image2.jpg"
+                                            alt="썸네일 이미지 2"></a>
                                 </td>
                                 <td class="cs-table-contents">
                                     <a href="#">주방 헤드 호환 문의</a> <img class="table-icon" src="/images/ico_hit.gif"
@@ -217,7 +250,8 @@
                             <tr>
                                 <td class="cs-table-num">4</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#"><img class="cs-thumb-img" src="/images/cs-sample-image3.jpg"
+                                            alt="썸네일 이미지 2"></a>
                                 </td>
                                 <td class="cs-table-contents">
                                     <a href="#">도마 고리 부분도 휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif"
