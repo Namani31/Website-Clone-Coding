@@ -67,6 +67,9 @@ main div.bath {
 .bath-item p {
   color: #333;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .bath-item a:nth-of-type(2) p {
