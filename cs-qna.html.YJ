@@ -89,7 +89,7 @@
         .date-left {
             text-align: center;
             font-size: 12px;
-            color:#868e96
+            color: #868e96
         }
     </style>
 </head>
@@ -122,19 +122,141 @@
                         </tr>
                     </thead>
                     <tbody class="cs-table-contents">
-                        <td class="cs-table-num">10</td>
-                        <td class="thumb-left">
-                            <a href="#"></a>
-                        </td>
-                        <td class="cs-table-contents">
-                            <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
-                        </td>
-                        <td class="cs-table-writer">양****</td>
-                        <td class="date-left">
-                            <span class="text-num">2024-07-10</span>
-                        </td>
+                        <tr>
+                            <td class="cs-table-num">10</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
+                            </td>
+                            <td class="cs-table-writer">양****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-07-10</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">9</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">상품문의</a>
+                            </td>
+                            <td class="cs-table-writer">이****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-06-07</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">8</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">베개 커버</a>
+                            </td>
+                            <td class="cs-table-writer">정****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-06-01</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">7</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">사용 문의</a>
+                            </td>
+                            <td class="cs-table-writer">김****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-05-31</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">6</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">상품 다시 보내주신다고 그러셨는데</a>
+                            </td>
+                            <td class="cs-table-writer">E****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-05-29</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">5</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">주방 헤드 호환 문의</a>
+                            </td>
+                            <td class="cs-table-writer">김****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-05-12</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">4</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">도마 고리 부분도 휘어지나요?</a>
+                            </td>
+                            <td class="cs-table-writer">김****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-04-29</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">3</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">도마 고리 부분도 휘어지나요?</a>
+                            </td>
+                            <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-04-29</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">2</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">가방도 세탁이 되나요?</a>
+                            </td>
+                            <td class="cs-table-writer">양****</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-04-21</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="cs-table-num">1</td>
+                            <td class="thumb-left">
+                                <a href="#"></a>
+                            </td>
+                            <td class="cs-table-contents">
+                                <a href="#">가방도 세탁이 되나요?</a>
+                            </td>
+                            <td class="cs-table-writer">PURESELL 퓨어셀</td>
+                            <td class="date-left">
+                                <span class="text-num">2024-04-21</span>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
+            </div>
+            <div class="cs-page-num">
+               <a href="#"><img src="/images/svg/" alt=""></a>
             </div>
         </div>
     </div>
