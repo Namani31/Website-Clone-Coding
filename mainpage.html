@@ -22,12 +22,10 @@
             text-align: center;
         }
         #header {
-            /* border: 1px solid orange; */
             width: 100%;
             z-index: 9;
             background-color: white;
             position: fixed;
-            /* overflow: hidden; */
         }
         body {
             max-width: 100%;
@@ -86,11 +84,9 @@
             #header_bottom {
                 margin: 0 auto;
                 width: 100%;
-                max-width: 1100px;
-                /* border: 1px solid blue; */
+                max-width: 1500px;
             }
             #logo {
-                /* border: #555 1px solid; */
                 text-align: center;
                 margin: 15px auto;
             }
@@ -99,7 +95,6 @@
                 overflow: hidden;
                 margin: 0 10px;
                 font-size: 13px;
-                /* border: 1px solid pink; */
             }
             #header_login span{
                 color: #ccc;
@@ -134,9 +129,7 @@
                 margin-bottom: 15px;
             }
             #main_gnb {
-                /* border: 1px solid palevioletred; */
                 display: flex;
-                /* float: left; */
                 margin: 0 auto;
                 padding: 0;
                 width: 600px;
@@ -144,10 +137,8 @@
 
             #main_gnb>li {
                 position: relative;
-                /* margin: 0 auto; */
             }
             #main_gnb>li>a {
-                /* border: 1px solid saddlebrown; */
                 display: block;
                 padding: 5px 5px;
                 font-size: 20px;
@@ -243,14 +234,14 @@
             <style>
                 #cart {
                     width: 100%;
-                    max-width: 1100px;
+                    max-width: 1500px;
                     min-width: 700px;
                     position: absolute;
                     top: 140px;
                 }
                 #cart >.search {
                     position: absolute;
-                    right: 1%;
+                    right: 0;
                     margin: 0 10px;
                 }
                 #cart>.search>a {
@@ -275,16 +266,14 @@
             min-width: 2000px;
             width: 100%;
             margin: 0 auto;
-            padding-top: 250px;
+            padding-top: 200px;
             position: relative;
             overflow: hidden;
-            /* max-width: 100%; */
         }
         #main_slide_box{
             width: 2200px;
             margin: 50px auto;
             overflow: hidden;
-            /* background-color: brown; */
         }
 
         #main_slide {
@@ -292,28 +281,15 @@
             z-index: 0;
             position: relative;
             max-width: 100%;
-            /*margin: 50px auto;*/
-            /* overflow: hidden;  */
-            /* border: 1px solid blue; */
         }
 
         .slider_panel{
-            /* width: 100%; */
             display: flex;
             position: relative;
             left:250px;  /*좌표변경으로 스라이딩 표현 */
             transition: left 0.5s ease; 
         }
-
-        /* .slider_panel>li {
-            border: 5px solid blue;
-        }
-        .slider_panel>li:nth-child(odd) {
-            background-color: #c3eb13;
-        } */
-
         .slider_panel>li>a {
-            /* margin-left: 40px; */
             width: 1500px;
             box-sizing: border-box;
             padding: 10px;
@@ -326,12 +302,10 @@
         }
 
         .control_panel {
-            /* width: 100%; */
             position: absolute;
             display: flex;
             bottom: 30px;
             left: 50%;
-            /* border: 1px solid blue;             */
         }
         .control_btn {
             margin: 0 20px;
@@ -348,16 +322,11 @@
             position: absolute;
             top: 50%;
             width: 100%;
-            /*left: 0px;*/
-            /* justify-content:space-between; */
             display: flex;
-             /* border: 1px solid green;  */
         }
         .leftBtn>img {
             transform: rotate(-90deg);
-            /* margin-left: -500px; */
             cursor: pointer;
-            /* background-color: blue; */
             position: absolute;
              left:50px; 
         }
@@ -455,38 +424,30 @@
          <style>
             #main_best {
                 /* border: 1px solid black; */
-                margin: 100px auto;
-                width: 1800px;
+                margin: 130px auto;
+                width: 1500px;
                 text-align: center;
             }
             #main_best>h1 {
                 font-size: 40px;
                 padding: 20px;
-                /* margin: 20px; */
             }
             div.bestList {
-                /* width: 100%; */
-                /* margin: 0 auto; */
-                /* border: 1px solid red; */
                 overflow: hidden;
-                padding: 20px;
             }
             ul.bestImg {
                 float: left;
-                /* border: 1px solid b?lue; */
-                margin: 40px;
+                margin: 40px 22px;
             }
             .bestImg>li {
-                /* border: 1px solid orange; */
-                width: 500px;
-                /* padding: 20px; */
+                width: 450px;
                 margin-bottom: 10px;
                 overflow: hidden;
                 position: relative;
             }
             .bestImg>li>a>img {
-                width: 500px;
-                height: 500px;
+                width: 450px;
+                height: 450px;
                 z-index: 0;
             }
             .bestImgText {
@@ -579,20 +540,18 @@
          <!-- 본문 4 추천상품 시작-->
           <style>
             #main_rec {
-                /* border: 1px solid black; */
-                width: 1800px;
+                width: 1500px;
                 margin: 0px auto;
                 padding: 50px;
                 overflow: hidden;
                 margin-top: 100px;
             }
             .recSet {
-                /* border: 1px solid red; */
-                width: 1400px;
+                width: 1500px;
                 margin: 0 auto;
             }
             .recLeft {
-                /* margin-left: 30px; */
+                margin-left: 30px;
                 float: left;
             } 
             .recLeft>div {
@@ -610,7 +569,6 @@
             .recRight {
                 width: 700px;
                 margin-top: 10px;
-                /* border: 1px solid salmon; */
                 float: right;
             }
             .recRightImgBox {
@@ -721,8 +679,8 @@
          <!-- 본문 5 신상품 시작 -->
          <style>
             #main_new {
-                margin: 100px auto;
-                width: 1800px;
+                margin: 130px auto;
+                width: 1500px;
                 text-align: center;
             }
             #main_new>h1 {
@@ -731,21 +689,22 @@
             }
             div.newList {
                 overflow: hidden;
-                padding: 20px;
+                /* padding: 20px; */
             }
             ul.newImg {
                 float: left;
-                margin: 40px;
+                margin: 40px 22px;
+                /* margin: 40px; */
             }
             .newImg>li {
-                width: 500px;
+                width: 450px;
                 margin-bottom: 10px;
                 overflow: hidden;
                 position: relative;
             }
             .newImg>li>a>img {
-                width: 500px;
-                height: 500px;
+                width: 450px;
+                height: 450px;
                 z-index: 0;
             }
             .newImgText {
@@ -827,13 +786,15 @@
             #main_review {
                 margin: 50px auto;
                 margin-bottom: 200px;
-                width: 1400px;
+                width: 1500px;
                 text-align: center;
             }
             .reviewTop {
                 position: relative;
+                margin: 20px 0;
                 height: 70px;
                 width: 100%;
+
             }
             .reviewTop>h1 {
                 line-height: 70px;
@@ -861,12 +822,12 @@
                 display: inline-block;
                 border: 1px solid #ccc;
                 margin: 0 10px;
-                width: 300px;
-                height: 490px;
+                width: 320px;
+                height: 500px;
             }
             .reviewPart>div>a>img {
-                width: 300px;
-                height: 300px;
+                width: 320px;
+                height: 320px;
             }
             .reviewTxt {
                 padding: 20px 10px;
@@ -999,6 +960,146 @@
          <!-- 본문5 리뷰 끝 -->
      </div>
      <!-- 본문끝!!! -->
-    <!-- 하단영역 -->
+
+    <!-- 하단영역 280 300-->
+     <style>
+        #footer {
+            background-color: white;
+            width: 100%;
+            min-width: 2000px;
+        }
+        .footerSize {
+            width: 1600px;
+        }
+        .footerTop {
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            height: 60px;
+            line-height: 60px;
+        }
+        .footerTopLeft {
+            float: left;
+            /* width: 1600px; */
+            /* padding: 10px 0; */
+        }
+        .footerTopLeft a {
+            font-size: 14px;
+            color: #797979;
+        }
+        .footerTopLeft>div{
+            margin: 0 20px;
+            height: 10px;
+            display: inline-block;
+            border-left: 1px solid #444;
+        }
+        a.textBold {
+            color: black;
+            font-weight: 600;
+        }
+        .footerBottom {
+            height: 210px;
+        }
+        .footerBottomLeft {
+            margin-top: 20px;
+            width: 800px;
+            float: left;
+        }
+        .footerImg {
+            width: 100px;
+            padding: 10px;
+            float: left;
+        }
+        .footerImg>a>img {
+            width: 100px;
+        }
+        .footerBottomRight {
+            width: 230px;
+            margin-top: 30px;
+            float: right;
+        }
+        .footerText {
+            margin-left: 150px;
+            line-height: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #797979;
+        }
+        .footerCs>h2 {
+            font-size: 18px;
+            color: #191919;
+            margin-bottom: 10px;
+        }
+        .footerCs>p {
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #797979;
+        }
+        .footerBox> div{
+            margin-left: 3px;
+            font-size: 12px;
+            width: 105px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: #ccc 1px solid;
+            display: inline-block;
+        }
+        .footerBox>div>a {
+            color: #797979;
+        }
+        .footerBox>div:hover {
+            transition: 0.7s;
+            background-color: #2af;
+        }
+        .footerBox>div:hover>a {
+            transition: 0.7s;
+            color: white;
+        }
+        </style>
+     <div id="footer">
+        <div class="footerTop">
+            <div class="footerSize">
+                <div class="footerTopLeft">
+                    <span><a href="#">회사소개</a></span>
+                    <div></div>
+                    <span><a href="#">이용약관</a></span>
+                    <div></div>
+                    <span><a href="#" class="textBold">개인정보처리방침</a></span>
+                    <div></div>
+                    <span><a href="#">이용안내</a></span>
+                </div>
+                <div class="footerTopRight"></div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <div class="footerSize">
+                <div class="footerBottomLeft">
+                    <div class="footerImg">
+                        <a href="#"><img src="images/logo.png" alt=""></a>
+                    </div>
+                    <div class="footerText">
+                        <p>(주) 퓨어셀코리아 <br>
+                            대표자 : 김철호사업자 등록번호 : 411-81-92320<br>
+                            통신판매업 신고번호 : 2020-서울강남-02095 [사업자정보확인]<br>
+                            주소 : 서울특별시 강남구 학동로101길 26 (청담동) 211호 개인정보관리책임자 : 이진희<br>
+                        </p>
+                        <address>Copyright © PURESELL 퓨어셀. All rights reserved.</address>
+                    </div>
+                </div>
+                <div class="footerBottomRight">
+                    <div class="footerCs">
+                        <h2>CS CENTER 1599-8604</h2>
+                        <p>평일 10:00 - 17:00 <br>
+                            (점심시간 : 12:00 - 13:00)<br>
+                            ​토.일.공휴일 휴무</p>
+                    </div>
+                    <div class="footerBox">
+                        <div><a href="#">1:1문의하기</a></div>
+                        <div><a href="#">자주 묻는 질문</a></div>
+                    </div>
+            </div>
+            </div>
+        </div>
+     </div>
 </body>
 </html>
