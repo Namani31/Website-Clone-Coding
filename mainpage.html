@@ -9,7 +9,7 @@
     <style>
         * {
             font-family: sans-serif;
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
         }
         ul,li {
@@ -26,6 +26,9 @@
             background-color: white;
             position: fixed;
             /* overflow: hidden; */
+        }
+        body {
+            margin: 0 auto;
         }
         </style>
 </head>
@@ -80,13 +83,13 @@
             #header_bottom {
                 margin: 0 auto;
                 width: 100%;
-                max-width: 1000px;
+                max-width: 1100px;
                 /* border: 1px solid blue; */
             }
             #logo {
                 /* border: #555 1px solid; */
                 text-align: center;
-                margin: 15px 0;
+                margin: 15px auto;
             }
             
             #header_login {
@@ -144,16 +147,16 @@
                 /* border: 1px solid saddlebrown; */
                 display: block;
                 padding: 5px 5px;
-                font-size: 18px;
-                font-weight: 800;
+                font-size: 20px;
+                font-weight: 600;
                 color: #444;
-                width: 80px;
+                width: 90px;
             }
             #main_gnb>li>a:hover {
                 color: #2af;
             }
             #main_gnb>div {
-                color: #555;
+                color: #aaa;
                 font-weight: 700px;
                 line-height: 30px;
             }
@@ -162,7 +165,7 @@
                 padding: 20px 2px;
                 display: none;
                 z-index: 10;
-                left: -25px;
+                left: -20px;
                 border: 1px solid #444;
                 font-size: 13px;
                 font-weight: 400;
@@ -237,7 +240,7 @@
             <style>
                 #cart {
                     width: 100%;
-                    max-width: 1000px;
+                    max-width: 1100px;
                     min-width: 700px;
                     position: absolute;
                     top: 140px;
@@ -266,35 +269,42 @@
      <!-- 슬라이드 이미지 시작 -->
      <style>
         #main {
-            width: 100%;
-            padding-top: 184px;
+            width: 2200px;
+            /* max-width: 100%; */
+            margin: 0 auto;
+            padding-top: 250px;
             position: relative;
+            overflow: hidden;
         }
         #main_slide {
+            width: 2200px;
             z-index: 0;
             position: relative;
-            max-width: 1000px;
-            margin: 30px auto;
+            /* max-width: 100%; */
+            /* margin: 50px 0; */
             /* overflow: hidden; */
         }
         #main_slide>ul {
             display: flex;
-            left: 0;
             transition: left 0.5s ease;
+            /* width: 100%; */
         }
         #main_slide>ul>li {
-            margin-right: 30px;
+            /* margin-right: 30px; */
         }
         #main_slide>ul>li>a {
-            width: 100%;
+            margin-left: 40px;
             display: block;
         }
         #main_slide>ul>li>a>img {
-            max-width: 1000px;
+            margin-left: 30px;
+            /* transform: translateX(-500px); */
+            /* max-width: 1000px; */
             display: block;
         }
 
         .control_panel {
+            /* width: 100%; */
             position: absolute;
             display: flex;
             bottom: 20px;
@@ -312,101 +322,65 @@
             border: 1px solid white;
         }
         .slide_btn {
+            /* max-width: 2200px; */
+            /* transform: translateX(560px); */
             position: absolute;
+            /* margin: 0 auto; */
             top: 50%;
-            max-width: 1000px;
-            width: 100%;
+            width: 2600px;
+            left: -240px;
             justify-content: space-between;
             display: flex;
         }
         .leftBtn>img {
             transform: rotate(-90deg);
-            margin-left: 30px;
+            /* margin-left: -500px; */
             cursor: pointer;
         }
         .rightBtn>img {
             transform: rotate(90deg);
-            margin-right: 30px;
+            /* margin-right: -500px; */
             cursor: pointer;
         }
      </style>
-     <!-- <script>
-        function initSlider() {
-            const $sliderPanel = $('.slider_panel')
-            const $controlBtn = $('.control_btn')
-            const $leftBtn = $('.leftBtn img')
-            const $rightBtn = $('.rightBtn img')
-
-            let currentIndex = 0;
-
-            function updateSlider(index) {
-                $sliderPanel.css('left',`-${index * 1000}%`);
-                $controlBtn.removeClass('btn_check');
-                $controlBtn.eq(index).addClass('btn_check');
-            }
-            $leftBtn.on('click', function(){
-                currentIndex--;
-                if (currentIndex < 0) {
-                    currentIndex = 0 ;
-                }
-                updateSlider(currentIndex);
-            });
-            $rightBtn.on('click', function(){
-                currentIndex++;
-                if (currentIndex < 5) {
-                    currentIndex = 5 ;
-                }
-                updateSlider(currentIndex);
-            });
-            $controlBtn.on('click', function(){
-                currentIndex = parseInt($(this).data('index'));
-                updateSlider(currentIndex);
-            });
-            setInterval(function(){
-                currentIndex = (currentIndex +1 )% $controlBtn.length;
-                updateSlider(currentIndex);
-            },3000);
-        }
-     </script> -->
-     <!-- <script>
-        $(function(){
-            $('.leftBtn').on('click',function(){
-                $('.slider_panel').css('left','-1000px')
-            });
-        });
-        let totalImg = $('.slider_panel img').length;
-        let currentIndex = 0;
-
-        function nextSlide() {
-            let next = (currentIndex + 1) % totalImg;
-            $('.slider_panel img').eq(currentIndex).css('margin-left','1000px');
-            $('.slider_panel img').eq(next).css('margin-left','-1000px');
-            currentIndex=next;
-        }
-        setInterval(nextSlide,3000);
-     </script> -->
      <script>
-        $(document).ready(function() {
-            var slideIndex = 0;
-            var slidesCount = $('#main_slide > ul > li').length;
-            var slideWidth = $('#main_slide > ul > li').outerWidth();
-            var maxOffset = -(slidesCount - 1) * slideWidth;
-            
-            // 좌측 버튼 클릭 시
-            $('.leftBtn').click(function() {
-                slideIndex = (slideIndex === 0) ? slidesCount - 1 : slideIndex - 1;
-                var offset = -slideIndex * slideWidth;
-                $('#main_slide > ul').css('left', offset + 'px');
-            });
+         $(function(){
+             let btnClick = 0;
+            function aniSlider(index){
+                $('.leftBtn','.rightBtn').hide();
+                $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
+                    $('.slider_panel>li:first').appendTo('.slider_panel');
+                    $('.slider_panel').css('margin-left','-1000px');
+                    $('.control_btn').removeClass('btn_check');
+                    $('.control_btn').eq(index).addClass('btn_check');
+                    $('.leftBtn','.rightBtn').show();
+                });
+            }
+            aniSlider();
+            setInterval(aniSlider,10000);
 
-            // 우측 버튼 클릭 시
-            $('.rightBtn').click(function() {
-                slideIndex = (slideIndex === slidesCount - 1) ? 0 : slideIndex + 1;
-                var offset = -slideIndex * slideWidth;
-                $('#main_slide > ul').css('left', offset + 'px');
+            $('.leftBtn').on('click',function(){
+                $('.slider_panel').animate({marginLeft:"+=1000px"},300,'swing',function(){
+                    $('.slider_panel>li:last').prependTo('.slider_panel');
+                    $(this).css('margin-left','-1000px')
+                });
             });
+            $('.rightBtn').on('click',function(){
+                $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
+                    $('.slider_panel>li:first').appendTo('.slider_panel');
+                    $(this).css('margin-left','-1000px')
+                });
+            });
+            // $('.control_btn').on('click',function(){
+            //     btnClick = parseInt($(this).data('index'));
+            //     aniSlider(btnClick);
+            // });
+            // setInterval(function(){
+            //     btnClick = (btnClick +1) % $('.control_btn').length;
+            //     aniSlider(btnClick);
+            // },3000);
         });
-    </script>
+     </script>
         <div id="main_slide">
             <ul class="slider_panel">
                 <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
