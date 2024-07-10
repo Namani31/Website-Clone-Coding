@@ -104,3 +104,23 @@ main div.bath {
   top: 0;
   display: none;
 }
+
+.page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0 120px 0;
+}
+
+.page-btn a {
+  color: #333;
+  font-weight: 600;
+  overflow: hidden;
+  display: block;
+}
+
+.page-btn a u {
+  display: block;
+  text-align: center;
+  line-height: 30px;
+}
