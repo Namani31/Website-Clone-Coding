@@ -9,6 +9,8 @@
     <style>
         body {
             width: 1480px;
+            margin: 0 auto;
+
         }
 
         .wrap {
@@ -51,7 +53,6 @@
             border-bottom: 1px solid #ebebeb;
             color: #555555;
             line-height: 1.5;
-
         }
 
         .cs-table-header th {
@@ -67,16 +68,18 @@
         }
 
         .cs-table-contents td {
-            padding-top: 20px;
             border-bottom: 1px solid #ebebeb
         }
 
         .cs-table-num {
             text-align: center;
+            vertical-align: middle;
         }
 
         .cs-table-contents {
             padding-left: 10px;
+            vertical-align: middle;
+
         }
 
         .cs-table-contents>a {
@@ -86,12 +89,14 @@
 
         .cs-table-writer {
             text-align: center;
+            vertical-align: middle;
         }
 
         .date-left {
             text-align: center;
             font-size: 12px;
-            color: #868e96
+            color: #868e96;
+            vertical-align: middle;
         }
 
         .table-answer {
@@ -101,6 +106,58 @@
 
         .table-icon {
             text-align: center;
+        }
+
+        .cs-thumb-img {
+            width: 46px;
+        }
+
+        .thumb-left {
+            padding-top: 12px;
+            padding-left: 10px;
+            padding-bottom: 12px;
+        }
+
+        .thumb-left>a {
+            text-decoration: none;
+            color: #555555;
+        }
+
+        .cs-thumb-description {
+            display: inline-block;
+            width: 100px;
+            height: 32px;
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .cs-table-title {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .cs-bottom-paging {
+            margin: 50px 0 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-paging-num > a {
+            width: 13px;
+            color: black;
+            font-weight: bold;
+            margin: 1px 5px 0;
+        }
+
+        .cs-paging-btn {
+            clip-path: inset(3px 3px 3px 3px);
+            margin-top: 2px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -119,7 +176,7 @@
                         <!-- colgroup으로  테이블 크기 설정-->
                         <colgroup style="background-color: #fff;">
                             <col style="width:60px">
-                            <col style="width:190px">
+                            <col style="width:250px">
                             <col style="width:65%">
                             <col style="width:120px;">
                             <col style="width:105px;">
@@ -140,20 +197,27 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</a>
+                                    <a href="#"><span class="cs-table-title">퓨어셀 리퓨어 샤워기 필터, 헤드 물곰팡이 질문드려요</span></a>
                                 </td>
                                 <td class="cs-table-writer">양****</td>
                                 <td class="date-left">
-                                    <span class="text-num">2024-07-10</span>
+                                    <span class="text-num" `>2024-07-10</span>
                                 </td>
                             </tr>
                             <tr>
+                                <div class="cs-table-num"></div>
                                 <td class="cs-table-num">9</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image1.jpg" alt="썸네일 이미지 1">
+                                        <span class="cs-thumb-description">퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에 좋은 1인용 디스크
+                                            매트릭스 싱글</span>
+                                    </a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">상품문의</a> <img class="table-icon" src="/images/ico_lock.gif" alt="비밀글"> [1]
+                                    <a href="#"><span class="cs-table-title">상품문의</span></a> <img class="table-icon"
+                                        src="/images/ico_lock.gif" alt="비밀글">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">이****</td>
                                 <td class="date-left">
@@ -166,7 +230,9 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">베개 커버</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
+                                    <a href="#"><span class="cs-table-title">베개 커버</span></a> <img class="table-icon"
+                                        src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">정****</td>
                                 <td class="date-left">
@@ -176,10 +242,16 @@
                             <tr>
                                 <td class="cs-table-num">7</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image1.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 3단 접이식 매트리스 바닥 토퍼 접는 단단한 허리에 좋은 1인용 디스크
+                                            매트릭스 싱글</span>
+                                    </a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">사용 문의</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
+                                    <a href="#"><span class="cs-table-title">사용 문의</span></a> <img class="table-icon"
+                                        src="/images/ico_hit.gif" alt="HIT">
+                                    [1]
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -192,8 +264,8 @@
                                     <a href="#"></a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">상품 다시 보내주신다고 그러셨는데</a> <img class="table-icon" src="/images/ico_hit.gif"
-                                        alt="HIT"> [1]
+                                    <a href="#"><span class="cs-table-title">상품 다시 보내주신다고 그러셨는데</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT"> [1]
                                 </td>
                                 <td class="cs-table-writer">E****</td>
                                 <td class="date-left">
@@ -203,11 +275,14 @@
                             <tr>
                                 <td class="cs-table-num">5</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image2.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 녹물제거 주방 필터 헤드 기본세트_코브라형</span>
+                                    </a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">주방 헤드 호환 문의</a> <img class="table-icon" src="/images/ico_hit.gif"
-                                        alt="HIT">
+                                    <a href="#"><span class="cs-table-title">주방 헤드 호환 문의</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -217,11 +292,14 @@
                             <tr>
                                 <td class="cs-table-num">4</td>
                                 <td class="thumb-left">
-                                    <a href="#"></a>
+                                    <a href="#">
+                                        <img class="cs-thumb-img" src="/images/cs-sample-image3.jpg" alt="썸네일 이미지 2">
+                                        <span class="cs-thumb-description">퓨어셀 칼자국 칼집 안 나는 향균 TPU 안심 이유식 도마</span>
+                                    </a>
                                 </td>
                                 <td class="cs-table-contents">
-                                    <a href="#">도마 고리 부분도 휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif"
-                                        alt="HIT">
+                                    <a href="#"><span class="cs-table-title">도마 고리 부분도 휘어지나요?</span></a> <img
+                                        class="table-icon" src="/images/ico_hit.gif" alt="HIT">
                                 </td>
                                 <td class="cs-table-writer">김****</td>
                                 <td class="date-left">
@@ -230,11 +308,7 @@
                             </tr>
                             <tr>
                                 <td class="cs-table-num">3</td>
-                                <td class="thumb-left">
-                                    <a href="#">
-                                        <img src="/images/" alt="">
-                                    </a>
-                                </td>
+                                <td class="thumb-left"></td>
                                 <td class="cs-table-contents">
                                     <img src="images/ico_re.gif" alt="답변"><a href="#" class="table-answer">도마 고리 부분도
                                         휘어지나요?</a> <img class="table-icon" src="/images/ico_hit.gif" alt="HIT">
@@ -274,8 +348,24 @@
                         </tbody>
                     </table>
                 </div>
+
+            </div>
+            <!-- 하단 페이징 시작 -->
+            <div class="cs-bottom-paging">
+                <a href="#">
+                    <img class="cs-paging-btn" src="/images/btn_page_prev.gif" alt="이전 버튼">
+                </a>
+                <ol>
+                    <li class="cs-paging-num">
+                        <a href="#">1</a>
+                    </li>
+                </ol>
+                <a href="#">
+                    <img class="cs-paging-btn" src="/images/btn_page_next.gif" alt="다음 버튼">
+                </a>
             </div>
         </div>
+    </div>
     </div>
 </body>
 
