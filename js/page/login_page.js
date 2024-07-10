@@ -2,6 +2,7 @@
 class LoginPage extends Page{
     
     m_arrHtmlData;
+    m_htmlEle;
     
     constructor(data){
         if(data != null){
@@ -20,12 +21,25 @@ class LoginPage extends Page{
     // private
     _setData(data){
         this.m_arrHtmlData = data.m_arrPageHtml;
+        this.m_arrObjEle = new Array();
+        this.m_htmlEle = this._createHtml(this.m_arrHtmlData);
+
+    }
+
+    _createHtml(eleData){
+        let fragment = document.createDocumentFragment();
+        for(let i = 0; i<eleData.length; i++){
+            let temp = this._createEle(eleData[i]);
+            if(eleData[i].getChild()){
+                temp.append(this._createHtml(eleData[i].getChild()))
+            }
+            fragment.append(temp);
+        }
+        return fragment;
     }
 
     _openPage(window){
-        window.append();
-        _createEle();
-
+        window.append(this.m_htmlEle);
     }
     // private
 

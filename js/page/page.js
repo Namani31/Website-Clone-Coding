@@ -20,6 +20,19 @@ class HtmlData{
     m_strTextContent;
     m_arrChild;
 
+    getName(){
+        return this.m_eleName;
+    }
+    getEleAttr(){
+        return this.m_dicEleAttr;
+    }
+    getText(){
+        return this.m_strTextContent;
+    }
+    getChild(){
+        return this.m_arrChild;
+    }
+
     constructor(data){
         this.m_eleName = data.eleName;
         this.m_dicEleAttr = data.attribute;
@@ -45,28 +58,43 @@ class Page{
         }
     }
 
-    _createEle(eleStr,attrName = null,attr = null){
-        let tmpEle = document.createElement(eleStr);
-
-        if(attrName != null){
-            let type = typeof(attrName);
-
-            if(type === "string"){
-                tmpEle.setAttribute(attrName,attr);
-            }
-            else if(type === "object" && attrName.length == attr.length){
-                for(let i = 0; i<attrName.length; i++){
-                    tmpEle.setAttribute(attrName[i],attr[i]);
-                }
-            }
-            else{
-                console.log("createEle error!! - attrName.length : "
-                    +attrName.length+" attr.length : "+attr.length);
-                return;
+    _createEle(eleData){
+        let tmpEle = document.createElement(eleData.getName());
+        if(eleData.getEleAttr()){
+            let tmpArrKey = Object.keys(eleData.getEleAttr());
+            let tmpArrValue = Object.values(eleData.getEleAttr());
+            for(let i = 0; i < tmpArrKey.length; i++){
+                tmpEle.setAttribute(tmpArrKey[i],tmpArrValue[i]);
             }
         }
         return tmpEle;
     }
+
+    // 오버로딩이 안되나 계속 여기로 들어가짐
+    // _createEle(eleStr,attrName,attr){
+    //     if(typeof(eleStr) == typeof("")){
+    //         let tmpEle = document.createElement(eleStr);
+
+    //         if(attrName != null){
+    //             let type = typeof(attrName);
+
+    //             if(type === "string"){
+    //                 tmpEle.setAttribute(attrName,attr);
+    //             }
+    //             else if(type === "object" && attrName.length == attr.length){
+    //                 for(let i = 0; i<attrName.length; i++){
+    //                     tmpEle.setAttribute(attrName[i],attr[i]);
+    //                 }
+    //             }
+    //             else{
+    //                 console.log("createEle error!! - attrName.length : "
+    //                     +attrName.length+" attr.length : "+attr.length);
+    //                 return;
+    //             }
+    //         }
+    //         return tmpEle;
+    //     }
+    // }
 
     setStyle(ele,styPropName,styProp){
         if(ele != null){
