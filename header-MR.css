@@ -172,7 +172,7 @@ header {
 }
 
 #break-line {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid rgba(153, 153, 153, 0.4);
 }
 
 .global-toggle {
