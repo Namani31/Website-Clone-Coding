@@ -280,27 +280,48 @@
             overflow: hidden;
             /* max-width: 100%; */
         }
+        #main_slide_box{
+            width: 2200px;
+            margin: 50px auto;
+            overflow: hidden;
+            /* background-color: brown; */
+        }
+
         #main_slide {
-            width: 100%;
+            width: 1500px;
             z-index: 0;
             position: relative;
             max-width: 100%;
-            /* margin: 50px 0; */
-            /* overflow: hidden; */
+            /*margin: 50px auto;*/
+            /* overflow: hidden;  */
+            /* border: 1px solid blue; */
         }
-        #main_slide>ul {
-            display: flex;
-            /* transition: left 0.5s ease; */
+
+        .slider_panel{
             /* width: 100%; */
+            display: flex;
+            position: relative;
+            left:250px;  /*좌표변경으로 스라이딩 표현 */
+            transition: left 0.5s ease; 
         }
-        #main_slide>ul>li>a {
-            margin-left: 40px;
+
+        /* .slider_panel>li {
+            border: 5px solid blue;
+        }
+        .slider_panel>li:nth-child(odd) {
+            background-color: #c3eb13;
+        } */
+
+        .slider_panel>li>a {
+            /* margin-left: 40px; */
+            width: 1500px;
+            box-sizing: border-box;
+            padding: 10px;
             display: block;
         }
-        #main_slide>ul>li>a>img {
-            margin-left: 30px;
-            /* transform: translateX(-500px); */
-            /* max-width: 1000px; */
+
+        .slider_panel>li>a>img {            
+            width:100%;
             display: block;
         }
 
@@ -308,88 +329,115 @@
             /* width: 100%; */
             position: absolute;
             display: flex;
-            bottom: 20px;
+            bottom: 30px;
             left: 50%;
+            /* border: 1px solid blue;             */
         }
         .control_btn {
-            margin: 0 3px;
-            width: 13px;
-            height: 13px;
-            background-color: #ddd;
+            margin: 0 20px;
+            width: 16px;
+            height: 16px;
+            background-color: #ddd; 
             border-radius: 50%;
         }
         .btn_check {
             background-color: rgba(255, 255, 255, 0);
-            border: 1px solid white;
+            border: 1px solid white; 
         }
         .slide_btn {
-            /* max-width: 2200px; */
-            /* transform: translateX(560px); */
             position: absolute;
-            /* margin: 0 auto; */
             top: 50%;
-            width: 2600px;
-            left: -240px;
-            justify-content: space-between;
+            width: 100%;
+            /*left: 0px;*/
+            /* justify-content:space-between; */
             display: flex;
+             /* border: 1px solid green;  */
         }
         .leftBtn>img {
             transform: rotate(-90deg);
             /* margin-left: -500px; */
             cursor: pointer;
+            /* background-color: blue; */
+            position: absolute;
+             left:50px; 
         }
         .rightBtn>img {
             transform: rotate(90deg);
-            /* margin-right: -500px; */
             cursor: pointer;
+            position: absolute;
+             right:50px; 
         }
      </style>
      <script>
          $(function(){
-             let btnClick = 0;
-            function aniSlider(index){
+            let btnClick = 0;
+            index=0;
+            function aniSlider(idx){
                 $('.leftBtn','.rightBtn').hide();
-                $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
-                    $('.slider_panel>li:first').appendTo('.slider_panel');
-                    $('.slider_panel').css('margin-left','-1000px');
-                    $('.control_btn').removeClass('btn_check');
-                    $('.control_btn').eq(index).addClass('btn_check');
-                    $('.leftBtn','.rightBtn').show();
-                });
+                $('.slider_panel').css('left', `-${(idx+1) * 100}%`);
+                // $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
+                //     $('.slider_panel>li:first').appendTo('.slider_panel');
+                //     $('.slider_panel').css('margin-left','-1000px');
+                //     $('.control_btn').removeClass('btn_check');
+                //     $('.control_btn').eq(index).addClass('btn_check');
+                // });
+                console.log('left : ' + $('.slider_panel').css('left'));
+                $('.control_btn').removeClass('btn_check');
+                $('.control_btn').eq(idx).addClass('btn_check');
+                $('.leftBtn','.rightBtn').show();
             }
-            aniSlider();
-            // setInterval(aniSlider,10000);
+            //aniSlider(2);
+            //setInterval(aniSlider,1000);
 
             $('.leftBtn').on('click',function(){
-                $('.slider_panel').animate({marginLeft:"+=1000px"},300,'swing',function(){
-                    $('.slider_panel>li:last').prependTo('.slider_panel');
-                    $(this).css('margin-left','-1000px')
-                });
+                index--;
+                if(index<0){
+                    index=2;
+                }
+                aniSlider(index);
+
+                // $('.slider_panel').animate({marginLeft:"+=1000px"},300,'swing',function(){
+                //     $('.slider_panel>li:last').prependTo('.slider_panel');
+                //     $(this).css('margin-left','-1000px')
+                // });
             });
             $('.rightBtn').on('click',function(){
-                $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
-                    $('.slider_panel>li:first').appendTo('.slider_panel');
-                    $(this).css('margin-left','-1000px')
-                });
+                index++;
+                if(index>2){
+                    index=0;
+                }
+                aniSlider(index);
+                // $('.slider_panel').animate({marginLeft:"-=1000px"},300,'swing',function(){
+                //     $('.slider_panel>li:first').appendTo('.slider_panel');
+                //     $(this).css('margin-left','-1000px')
+                // });
             });
-            // $('.control_btn').on('click',function(){
-            //     btnClick = parseInt($(this).data('index'));
-            //     aniSlider(btnClick);
-            // });
-            // setInterval(function(){
-            //     btnClick = (btnClick +1) % $('.control_btn').length;
-            //     aniSlider(btnClick);
-            // },3000);
+
+            $('.control_btn').on('click',function(){
+                index = parseInt($(this).data('index'));
+                aniSlider(index);
+            });
+
+            setInterval(function(){
+                index = (index +1) % $('.control_btn').length;
+                aniSlider(index);
+            },3000);
+            aniSlider(0);
+            $('.control_panel').css('margin-left', `-${$('.control_panel').css("width")}px`)
+            $('.control_panel').css('margin-left', '-'+$('.control_panel').width()/2+'px' );
+
         });
      </script>
-        <div id="main_slide">
+        <div id="main_slide_box">
+
+            <div id="main_slide">
             <ul class="slider_panel">
                 <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
+                 <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
+               <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/main_slide_01.jpg" alt=""></a></li>
                 <li><a href="#"><img src="images/main_slide_02.jpg" alt=""></a></li>
-                <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/main_slide_03.jpg" alt=""></a></li> 
             </ul>
             <div class="control_panel">
                 <div class="control_btn btn_check" data-index="0"></div>
@@ -401,6 +449,7 @@
                 <div class="rightBtn"><img src="images/svg/btn_quick_top.svg" alt=""></div>
             </div>
         </div>
+    </div>
         <!-- 본문영역 1 슬라이드 이미지 끝 -->
          <!-- 본문영역 2 베스트상품 -->
          <style>
@@ -535,6 +584,7 @@
                 margin: 0px auto;
                 padding: 50px;
                 overflow: hidden;
+                margin-top: 100px;
             }
             .recSet {
                 /* border: 1px solid red; */
@@ -625,10 +675,10 @@
         <div id="main_rec">
             <div class="recSet">
                 <div class="recLeft">
-                    <div>
+                    <div><a href="">
                         <img class="recLeftMain" src="images/product_pick_01.jpg" alt="">
                         <img class="recLeftTop" src="images/Untitled-2.gif" alt="">
-                    </div>
+                    </a></div>
                 </div>
                 <div class="recRight">
                     <div class="recRightImgBox">
@@ -671,7 +721,6 @@
          <!-- 본문 5 신상품 시작 -->
          <style>
             #main_new {
-                /* border: 1px solid black; */
                 margin: 100px auto;
                 width: 1800px;
                 text-align: center;
@@ -679,24 +728,17 @@
             #main_new>h1 {
                 font-size: 40px;
                 padding: 20px;
-                /* margin: 20px; */
             }
             div.newList {
-                /* width: 100%; */
-                /* margin: 0 auto; */
-                /* border: 1px solid red; */
                 overflow: hidden;
                 padding: 20px;
             }
             ul.newImg {
                 float: left;
-                /* border: 1px solid b?lue; */
                 margin: 40px;
             }
             .newImg>li {
-                /* border: 1px solid orange; */
                 width: 500px;
-                /* padding: 20px; */
                 margin-bottom: 10px;
                 overflow: hidden;
                 position: relative;
@@ -779,9 +821,184 @@
                 </ul>
             </div>
         </div>
-        <div id="main_review"></div>
-     </div>
+        <!-- 본문5 신상품 끝 -->
+         <!-- 본문5 리뷰 시작 -->
+          <style>
+            #main_review {
+                margin: 50px auto;
+                margin-bottom: 200px;
+                width: 1400px;
+                text-align: center;
+            }
+            .reviewTop {
+                position: relative;
+                height: 70px;
+                width: 100%;
+            }
+            .reviewTop>h1 {
+                line-height: 70px;
+                font-size: 40px;
+            }
+            .reviewTop>div {
+                position: absolute;
+                right: 0;
+                top: 25px;
+                margin-right: 70px;
+            }
+            .reviewTop>div a {
+                color: #aaa;
+                margin-right: 10px;
+                font-size: 13px;
+            }
+            .reviewTop>div img {
+                width: 10px;
+            }
 
+            .reviewSec {
+                margin: 50px auto;
+            }
+            .reviewPart {
+                display: inline-block;
+                border: 1px solid #ccc;
+                margin: 0 10px;
+                width: 300px;
+                height: 490px;
+            }
+            .reviewPart>div>a>img {
+                width: 300px;
+                height: 300px;
+            }
+            .reviewTxt {
+                padding: 20px 10px;
+            }
+            .reviewTxt>h3 {
+                height: 25px;
+                font-size: 17px;
+                font-weight: 1000;
+                color: #111;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .reviewTxt>p {
+                margin: 10px 0;
+                height: 50px;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                text-align: left;
+                font-size: 14px;
+                font-weight: 600;
+                color: #777;
+            }
+            .reviewTxtImg {
+                height: 50px;
+                line-height: 50px;
+            }
+            .reviewTxtImg>a{
+                float: left;
+                margin: 0 10px;
+            }
+            .reviewTxtImg>a>img {
+                width: 50px;
+            }
+            .reviewTxtImg>p {
+                float: left;
+                font-size: 14px;
+                color: #777;
+                font-weight: 600;
+            }
+            .reviewTxtImg>img {
+                float: right;
+                margin-top: 20px;
+                margin-right: 10px;
+            }
+            .reviewPart{
+                transition: all 0.4s ease;
+            }
+            .reviewPart:hover {
+                transform: translateY(-20px);
+                box-shadow: 5px 7px 10px 2px rgba(0,0,0, 0.1);
+            }
+          </style>
+         <div id="main_review">
+            <div class="reviewTop">
+                <h1>REVIEW</h1>
+                <div>
+                    <a href="#">MORE</a>
+                    <img src="images/svg/btn_more.svg" alt="">
+                </div>
+            </div>
+            <div class="reviewSec">
+                <div class="reviewPart">
+                    <div><a href="#"><img src="images/img_no_img01.jpg" alt=""></a></div>
+                    <div class="reviewTxt">
+                        <h3>퓨어셀 모달 워셔블 사계절 경추 베개</h3>
+                        <p>
+                            베개 강추합니다~<br>
+                            말랑말랑하니 아주 부드럽게 기분좋구요.
+                        </p>
+                        <div class="reviewTxtImg">
+                                <a href="#"><img src="images/rev1.jpg" alt=""></a>
+                                <p>유****</p>
+                            <img src="images/ic_star5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reviewPart">
+                    <div><a href="#"><img src="images/ec83950ba38f370946dfd0ab675f384c.jpg" alt=""></a></div>
+                    <div class="reviewTxt">
+                        <h3>퓨어셀 녹물제거 세면대 필터 헤드 1년세트</h3>
+                        <p>
+                            세면대에서 계속 철가루 같은게<br> 나와서 찝찝하던 차에 
+                            추천받아서 구매해봤습니다,
+                        </p>
+                        <div class="reviewTxtImg">
+                                <a href="#"><img src="images/rev2.jpg" alt=""></a>
+                                <p>김****</p>
+                                <img src="images/ic_star4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reviewPart">
+                    <div><a href="#"><img src="images/3eb6fb019559a40a71b43ffeed6713e4.jpg" alt=""></a></div>
+                    <div class="reviewTxt">
+                        <h3>퓨어셀 녹물제거 주방 헤드 기본세트_핸디형</h3>
+                        <p>
+                            사용하기 매우 편하네요. <br>
+                            디자인도 마음에 들구요~
+                            물 수압도 강해진거 같아서 만족하며 쓰고 있습니다!
+                        </p>
+                        <div class="reviewTxtImg">
+                                <a href="#"><img src="images/rev3.png" alt=""></a>
+                                <p>주****</p>
+                            <img src="images/ic_star4.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="reviewPart">
+                    <div><a href="#"><img src="images/520cd41fb28bd96578f9c28ca125b0ce.jpg" alt=""></a></div>
+                    <div class="reviewTxt">
+                        <h3>퓨어셀 모달 워셔블 사계절 경추 베개</h3>
+                        <p>
+                            베개가 배송받을때는 딱딱하더니 <br> 안내문대로 금새 말랑말랑해지네요~
+
+                            적당한 높이하고 받쳐주는 느낌 아주 원하는 느낌이에요
+
+                            잘사용해보겠습니다~
+                        </p>
+                        <div class="reviewTxtImg">
+                                <a href="#"><img src="images/rev1.jpg" alt=""></a>
+                                <p>Y****</p>
+                            <img src="images/ic_star5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <!-- 본문5 리뷰 끝 -->
+     </div>
+     <!-- 본문끝!!! -->
     <!-- 하단영역 -->
 </body>
 </html>
