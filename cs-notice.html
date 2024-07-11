@@ -26,6 +26,21 @@
             padding-top: 200px;
         }
 
+        .title-qna {
+            text-align: center;
+        }
+
+        .title-qna>p {
+            color: #868e96;
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border-top: 3px solid black;
+            margin-top: 40px;
+        }
+
         h1 {
             font-size: 2em;
             font-weight: bold;
@@ -45,20 +60,20 @@
         .notice-category {
             display: flex;
             margin-bottom: 80px;
-            border: 1px solid #ddd;
             vertical-align: middle;
         }
 
         .notice-category li {
             text-align: center;
             display: flex;
+            border: 1px solid #ddd;
         }
-        
+
         .notice-category li:not(.notice-category-selected):hover {
             background-color: #00AFFF;
             transition: background-color, 0.5s;
         }
-        
+
         .notice-category li:not(.notice-category-selected):hover a {
             color: white;
             transform: color 0.5 ease;
@@ -91,36 +106,143 @@
             text-align: center;
         }
 
+        .cs-table-contents {
+            border-top: 1px solid #ddd;
+        }
+
+        .cs-table-header th {
+            padding-bottom: 15px;
+        }
+
+        .cs-table-no-content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .QnaSearchForm {
+            padding: 20px 0px;
+        }
+
+        .cs-search-date {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-key {
+            width: 90px;
+            height: 30px;
+            margin: 0px 5px 0px 0px;
+            padding: 0px 5px;
+            border: 1px solid #ebebeb;
+        }
+
+        .cs-search-input {
+            width: 172px;
+            height: 30px;
+            border: 1px solid #ebebeb;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button,
+        input::-webkit-search-results-button,
+        input::-webkit-search-results-decoration {
+            display: none;
+        }
+
+        .cs-search-btn {
+            display: inline-block;
+            width: 72px;
+            height: 30px;
+            padding-top: 7px;
+            box-sizing: border-box;
+            font-size: 13px;
+            color: #fff;
+            background: #bbb;
+            transition: background-position 0.3s;
+            background-size: 200% 100%;
+            background-image: linear-gradient(to right, #bbb 50%, #D3D3D3 50%);
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .cs-search-btn:hover {
+            background-position: -100% 0;
+        }
     </style>
 </head>
 
 <body>
     <div class="wrap">
         <div class="container">
-            <div class="notice-content">
-                <!-- 공지사항 타이틀 시작 -->
-                <div class="notice-title">
-                    <h1>공지사항</h1>
-                    <p>공지사항입니다.</p>
+            <div class="contents-qna">
+                <!-- QNA 테이블 시작 -->
+                <div class="title-qna">
+                    <h1>QNA</h1>
+                    <p>QNA입니다.</p>
                 </div>
-                <!-- 공지사항 타이틀 끝-->
+                <hr>
+                <div class="cs-table">
+                    <table border="1">
+                        <!-- colgroup으로  테이블 크기 설정-->
+                        <colgroup style="background-color: #fff;">
+                            <col style="width:60px">
+                            <col style="width:250px">
+                            <col style="width:65%">
+                            <col style="width:120px;">
+                            <col style="width:105px;">
+                            </colgroup`>
+                        <thead class="cs-table-header">
+                            <tr>
+                                <th scope="col">번호</th>
+                                <th scope="col">상품정보</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성일</th>
+                            </tr>
+                        </thead>
+                        <tbody class="cs-table-contents">
+                            <tr>
+                                <td colspan="5" class="cs-table-no-content">검색 결과가 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <ul class="notice-category">
-                <li class="notice-category-selected">
-                    <a href="#">공지사항</a>
-                </li>
-                <li>
-                    <a href="#">EVENT</a>
-                </li>
-                <li>
-                    <a href="#">REVIEW</a>
-                </li>
-                <li>
-                    <a href="#">FAQ</a>
-                </li>
-            </ul>
+            <!-- 검색 메뉴 시작 -->
+            <form class="QnaSearchForm" id="QnaSearchForm" action="#" method="get" target="top">
+                <div class="cs-form">
+                    <fieldset>
+                        <p>
+                            <select class="cs-search-date" name="cs-search-date" id="cs-search-date">
+                                <option value="week">일주일</option>
+                                <option value="month">한달</option>
+                                <option value="month3">세달</option>
+                                <option value="all">전체</option>
+                            </select>
+                            <select class="cs-search-key" name="cs-search-key" id="cs-search-key">
+                                <option value="title">제목</option>
+                                <option value="content">내용</option>
+                                <option value="writer_name">글쓴이</option>
+                                <option value="user_id">아이디</option>
+                            </select>
+                            <input class="cs-search-input" type="search" id="cs-search-input" name="cs-search-input">
+                            <a href="#" class="cs-search-btn">찾기</a>
+                        </p>
+                    </fieldset>
+                </div>
+            </form>
+            <!-- 검색 메뉴 끝 -->
         </div>
+        <!-- QNA 테이블 끝 -->
     </div>
+
 </body>
 
 </html>
