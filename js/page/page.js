@@ -60,17 +60,25 @@ class Page{
 
     _createEle(eleData){
         let tmpEle = document.createElement(eleData.getName());
+        if(eleData.getText())
+            tmpEle.textContent = eleData.getText();
         if(eleData.getEleAttr()){
             let tmpArrKey = Object.keys(eleData.getEleAttr());
             let tmpArrValue = Object.values(eleData.getEleAttr());
+            
             for(let i = 0; i < tmpArrKey.length; i++){
-                tmpEle.setAttribute(tmpArrKey[i],tmpArrValue[i]);
+                if(tmpArrValue[i] != "")
+                    tmpEle.setAttribute(tmpArrKey[i],tmpArrValue[i]);
             }
+            
+            if(eleData.getName() == 'input')
+                tmpEle.setAttribute('name',tmpEle.getAttribute('id'));
         }
         return tmpEle;
     }
 
     // 오버로딩이 안되나 계속 여기로 들어가짐
+    // 자바스크립트는 오버로딩 안된
     // _createEle(eleStr,attrName,attr){
     //     if(typeof(eleStr) == typeof("")){
     //         let tmpEle = document.createElement(eleStr);
