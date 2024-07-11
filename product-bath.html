@@ -7,109 +7,30 @@
     <link rel="stylesheet" href="header-MR.css" />
     <link rel="stylesheet" href="main-MR.css" />
     <link rel="stylesheet" href="footer-MR.css" />
+    <script src="js/jquery.js"></script>
+    <script src="header-MR.js" defer></script>
+    <script>
+      function includeHTML(ctrl, page, callback) {
+        $.get(page, function (data) {
+          $("#" + ctrl).append(data);
+          if (callback) {
+            callback();
+          }
+        });
+      }
+
+      // exampleCode
+      $(function () {
+        // window 내부 스크립트가 있다면 스크립트 분리 후
+        // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+        includeHTML("header_window", "sample-header-MR.html", null);
+        includeHTML("footer_window", "sample/sample_btn_scroll.html", null);
+        includeHTML("footer_window", "sample-footer-MR.html", null);
+      });
+    </script>
   </head>
   <body>
-    <header>
-      <div id="top-banner">
-        <a href="#">
-          <img
-            src="	https://puresell.cafe24.com/web/upload/NNEditor/20220627/2c8f696ba5f27ed5c5950f5660c53a79.jpg"
-            alt=""
-          />
-          <div id="top-banner-title">
-            <p>
-              카카오채널 추가시 할인쿠폰 지급
-              <img
-                src="	https://puresell.cafe24.com/web/upload/kdesign/ico/m_ic_top_bn.png"
-                alt=""
-              />
-            </p>
-          </div>
-        </a>
-      </div>
-
-      <div id="main-banner">
-        <div id="main-banner-login">
-          <p id="mbLogin"><a href="#">로그인</a></p>
-          <p id="mbJoin"><a href="#">회원가입</a></p>
-          <p id="mbCustomerContact"><a href="#">고객센터</a></p>
-        </div>
-
-        <div id="main-banner-logo">
-          <a href="mainpage.html"
-            ><img
-              src="	https://puresell.cafe24.com/web/upload/NNEditor/20220705/434ebed84a3058d3fce6f7c5561c1c95.png"
-              alt=""
-          /></a>
-        </div>
-
-        <div id="main-banner-wrap">
-          <div id="main-banner-nav">
-            <ul id="gnb">
-              <li><a href="product-brand.html">브랜드</a></li>
-              <li><a href="product-all-page1.html">ALL</a></li>
-              <li><a href="product-bath.html">바스</a></li>
-              <li><a href="product-utensils.html">주방용품</a></li>
-              <li><a href="product-living.html">리빙</a></li>
-              <li><a href="#">CS</a></li>
-
-              <div class="toggle-nav tn1">
-                <ul>
-                  <li><a href="#">ALL</a></li>
-                  <li><a href="#">샤워기</a></li>
-                  <li><a href="#">싱크대</a></li>
-                  <li><a href="#">세면대</a></li>
-                  <li><a href="#">필터</a></li>
-                </ul>
-              </div>
-              <div class="toggle-nav tn2">
-                <ul>
-                  <li><a href="#">ALL</a></li>
-                  <li><a href="#">도마</a></li>
-                  <li><a href="#">식기건조대</a></li>
-                </ul>
-              </div>
-              <div class="toggle-nav tn3">
-                <ul>
-                  <li><a href="#">ALL</a></li>
-                  <li><a href="#">매트리스</a></li>
-                  <li><a href="#">토퍼</a></li>
-                  <li><a href="#">베개</a></li>
-                </ul>
-              </div>
-              <div class="toggle-nav tn4">
-                <ul>
-                  <li><a href="#">QNA</a></li>
-                  <li><a href="#">공지사항</a></li>
-                  <li><a href="#">FNA</a></li>
-                </ul>
-              </div>
-            </ul>
-          </div>
-
-          <div id="main-banner-icon">
-            <ul id="icon">
-              <li>
-                <a href="#"
-                  ><img
-                    src="https://puresell.cafe24.com/web/upload/kdesign/ico/ic_hd_search.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="	https://puresell.cafe24.com/web/upload/kdesign/ico/ic_bag.svg"
-                    alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div id="break-line"></div>
-    </header>
+    <header id="header_window"></header>
 
     <main>
       <div class="bath">
@@ -343,82 +264,6 @@
         /></a>
       </div>
     </main>
-    <footer>
-      <div class="footer-link">
-        <div id="footer-link-wrap">
-          <div>
-            <ul id="web-link-list">
-              <li>회사소개</li>
-              <li>이용약관</li>
-              <li>개인정보처리방침</li>
-              <li>이용안내</li>
-            </ul>
-          </div>
-          <div>
-            <ul id="sns-link-list">
-              <li>
-                <a href="#"
-                  ><img
-                    src="https://puresell.cafe24.com/web/upload/kdesign/ico/ic_sns_facebook.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="https://puresell.cafe24.com/web/upload/kdesign/ico/ic_sns_insta.svg"
-                    alt=""
-                /></a>
-              </li>
-              <li>
-                <a href="#"
-                  ><img
-                    src="https://puresell.cafe24.com/web/upload/kdesign/ico/ic_sns_kakao.svg"
-                    alt=""
-                /></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-information">
-        <div class="office-info">
-          <div>
-            <a href="#"
-              ><img
-                src="	https://puresell.cafe24.com/web/upload/NNEditor/20220629/b49a0e81b1c4fdbd64f7c5fd6d2a91ab.png"
-                alt=""
-            /></a>
-          </div>
-          <div>
-            <p>(주) 퓨어셀코리아</p>
-            <div id="office-info-ceo">
-              <p>대표자 : 김철호</p>
-              <p>사업자 등록번호 : 411-81-92320</p>
-            </div>
-            <p>통신판매업 신고번호 : 2020-서울강남-02095 [사업자정보확인]</p>
-            <div id="office-info-addr">
-              <p>주소 : 서울특별시 강남구 학동로101길 26 (청담동) 211호</p>
-              <p>개인정보관리책임자 : 이진희</p>
-            </div>
-            <p>Copyright © PURESELL 퓨어셀. All rights reserved.</p>
-          </div>
-        </div>
-
-        <div class="contact-info">
-          <p>CS CENTER 1599-8604</p>
-          <p>평일 10:00 - 17:00</p>
-          <p>(점심시간 : 12:00 - 13:00)</p>
-          <p>토.일.공휴일 휴무</p>
-          <div id="contact-info-question">
-            <a href=""><p>1:1문의하기</p></a>
-            <a href=""><p>자주 묻는 질문</p></a>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <script src="header-MR.js"></script>
-    <script src="main-MR.js"></script>
+    <footer id="footer_window"></footer>
   </body>
 </html>
