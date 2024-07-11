@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mainPage</title>
-    <link rel="stylesheet" href="main_header_JH.css">
-    <link rel="stylesheet" href="mainpage_JH.css">
-    <link rel="stylesheet" href="main_footer_JH.css">
+    <link rel="stylesheet" href="css/main_header_JH.css">
+    <link rel="stylesheet" href="css/mainpage_JH.css">
+    <link rel="stylesheet" href="css/main_footer_JH.css">
     <script src="js/jquery.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="mainpage_JH.js"></script>
-    <script src="main_header_JH.js"></script>
+    <script src="js/mainpage_JH.js"></script>
+    <script src="js/main_header_JH.js"></script>
     <script>
         function includeHTML(ctrl, page, callback) {
           $.get(page, function (data) {
@@ -57,6 +57,24 @@
         </style>
 </head>
 <body>
+    <style>
+        #scroll{
+            position: fixed;
+            bottom: 35px;
+            right: 35px;
+            z-index: 10;
+        }
+        #scroll>a{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="scroll">
+        <a href="#"><img src="images/svg/btn_quick_kakao.svg" alt="kakao"></a>
+        <a href="#"><img src="images/svg/btn_quick_top.svg" alt="top"></a>
+        <a href="#"><img src="images/svg/btn_quick_bottom.svg" alt="bottom"></a>
+    </div>
     <!-- 헤더영역 -->
     <div id="searchImg">
         <div class="searchSize">
