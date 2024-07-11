@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <script src="/js/jquery.js"></script>
 
     <style>
         body {
@@ -177,9 +178,28 @@
             background-position: -100% 0;
         }
     </style>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).append(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+
+        $(function () {
+            includeHTML('header_window', "header.html", null);
+            includeHTML('footer_window', 'footer.html', null);
+            includeHTML('btn_scroll_window', 'btn_scroll.html', null);
+        });
+    </script>
 </head>
 
 <body>
+    <div id="header_window"></div>
+
     <div class="wrap">
         <div class="container">
             <div class="contents-cs">
@@ -255,9 +275,10 @@
             </form>
             <!-- 검색 메뉴 끝 -->
         </div>
-        <!-- QNA 테이블 끝 -->
+        <!-- 공지사항 테이블 끝 -->
     </div>
-
+    <div id="btn_scroll_window"></div>
+    <div id="footer_window"></div>
 </body>
 
 </html>
