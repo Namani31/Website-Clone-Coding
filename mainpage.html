@@ -31,21 +31,125 @@
             max-width: 100%;
             margin: 0 auto;
         }
+        </style>
+</head>
+<body>
+    <!-- 헤더영역 -->
+    <style>
         #searchImg {
-            position: absolute;
+            display: none;
+            /* position: absolute; */
             z-index: 11;
             position: fixed;
             width: 100%;
             height: 100%;
             background-color: rgba(0,0,0, 0.7) ;
-                }
-        </style>
-</head>
-<body>
-    <!-- 헤더영역 -->
+        }
+        .searchSize {
+            /* border: 1px solid white; */
+            width: 860px;          
+            height: 500px;  
+            margin: 200px auto;
+        }
+        .searchClose{
+            /* border: 1px solid salmon; */
+            width: 750px;
+            overflow: hidden;
+            margin-bottom: 100px;
+        }
+        .searchClose>img {
+            float: right;
+        }
+        .searchClose>img:hover {
+            transition: 0.5s;
+            transform:rotate(90deg);
+        }
+        .searchInput{
+            width: 860px;
+            /* border: 1px solid aliceblue; */
+            position: relative;
+        }
+        .searchInput>input{
+            width: 860px;
+            height: 60px;
+            background: none;
+            border: none;
+            border-bottom: 3px solid #eee;
+            font-size: 25px;
+            color: white;
+            padding: 2px 4px 2px 15px;
+        }
+        .inputImg {
+            top: 10px;
+            right: 0;
+            position: absolute;
+        }
+        input::placeholder {color:#eee;}
+        .inputImg>a>img {
+            width: 35px;
+            height: 35px;
+        }
+        .searchFav{
+            padding: 40px 20px;
+            overflow: hidden;
+            width: 860px;
+            /* border: 1px solid salmon; */
+        }
+        .searchFav>p {
+            float: left;
+            margin: 0 30px 0 0;
+            color: #eee;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 30px;
+        }
+        .searchFav>div>a {
+            margin: 0 5px;
+            text-align: center;
+            line-height: 30px;
+            float: left;
+            border: 3px solid #eee;
+            color: #eee;
+            font-size: 13px;
+            padding: 0 18px;
+            border-radius: 10px;
+        }
+        .searchFav>div>a:hover {
+            background-color: white;
+            color: #555;
+            transition: 0.5s;
+        }
+     </style>
+     <script>
+        $(function(){
+            $('.imgSearch').on('click', function(){
+                $('#searchImg').slideDown(500,'swing');
+                $('#searchImg').css('display','block');
+            });
+            $('.searchClose>img').on('click', function(){
+                $('#searchImg').slideUp(500,'swing');
+            });
+        });        
+     </script>
     <div id="searchImg">
-        <div class="searchInput">
-            <input type="button">
+        <div class="searchSize">
+            <div class="searchClose">
+                <img src="images/svg/btn_search_close.svg" alt="">
+            </div>
+            <div class="searchInput">
+                <input type="text" placeholder=" 검색어를 입력해주세요.">
+                <div class="inputImg">
+                    <a href="#">
+                        <img src="images/ic_header_search2.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="searchFav">
+                <p>인기 검색어</p>
+                <div><a href="#">토퍼</a></div>
+                <div><a href="#">베게</a></div>
+                <div><a href="#">샤워기</a></div>
+            </div>
         </div>
     </div>
 
@@ -265,7 +369,7 @@
             </style>
             <div id="cart">
                 <div class="search">
-                    <a href="#"><img src="images/svg/ic_hd_search.svg" alt=""></a>
+                    <a href="#"><img src="images/svg/ic_hd_search.svg" alt="" class="imgSearch"></a>
                     <a href="#"><img src="images/svg/ic_bag.svg" alt=""></a>
                 </div>
             </div>
