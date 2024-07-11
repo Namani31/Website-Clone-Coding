@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pure Sell - QnA</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <script src="/js/jquery.js"></script>
     <style>
         body {
             width: 1480px;
@@ -216,12 +217,28 @@
             background: #dddddd;
         }
     </style>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).append(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+
+        $(function () {
+            includeHTML('header_window', "header.html", null);
+            includeHTML('footer_window', 'footer.html', null);
+            includeHTML('btn_scroll_window', 'btn_scroll.html', null);
+        });
+    </script>
 </head>
 
-<!-- TODO: 1. 헤더 적용
-            2. 푸터 적용
-            3. 카카오 채널 적용 -->
 <body>
+    <div id="header_window"></div>
+
     <div class="wrap">
         <div class="container">
             <div class="contents-qna">
@@ -451,7 +468,8 @@
         </div>
         <!-- QNA 테이블 끝 -->
     </div>
-
+    <div id="btn_scroll_window"></div>
+    <div id="footer_window"></div>
 </body>
 
 </html>
