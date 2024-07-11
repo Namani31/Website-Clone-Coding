@@ -31,10 +31,24 @@
             max-width: 100%;
             margin: 0 auto;
         }
+        #searchImg {
+            position: absolute;
+            z-index: 11;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0, 0.7) ;
+                }
         </style>
 </head>
 <body>
     <!-- 헤더영역 -->
+    <div id="searchImg">
+        <div class="searchInput">
+            <input type="button">
+        </div>
+    </div>
+
     <div id="header">
         
         <!-- 헤더 상단 -->
@@ -247,11 +261,13 @@
                 #cart>.search>a {
                     margin: 0 10px;
                 }
+
             </style>
             <div id="cart">
                 <div class="search">
-                    <a href=""><img src="images/svg/ic_hd_search.svg" alt=""></a>
-                <a href=""><img src="images/svg/ic_bag.svg" alt=""></a></div>
+                    <a href="#"><img src="images/svg/ic_hd_search.svg" alt=""></a>
+                    <a href="#"><img src="images/svg/ic_bag.svg" alt=""></a>
+                </div>
             </div>
         </div>
         <div class="line"></div>
