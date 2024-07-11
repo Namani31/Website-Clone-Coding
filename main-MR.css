@@ -96,7 +96,7 @@ main div.bath {
   font-weight: 600;
 }
 
-.bath-item div:last-child {
+.price-percent {
   position: absolute;
   color: #fff;
   font-weight: 600;
@@ -106,6 +106,10 @@ main div.bath {
   line-height: 60px;
   top: 0;
   display: none;
+}
+
+li.discount-num:hover > div.price-percent {
+  display: block;
 }
 
 .page-btn {
