@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/reset.css">
+    <script src="/js/jquery.js"></script>
 
     <style>
         body {
@@ -184,9 +185,31 @@
             padding: 20px;
         }
     </style>
+
+    <script>
+        function includeHTML(ctrl, page, callback) {
+            $.get(page, function (data) {
+                $('#' + ctrl).append(data);
+                if (callback) {
+                    callback();
+                }
+            });
+        }
+
+        // exampleCode
+        $(function () {
+            // window 내부 스크립트가 있다면 스크립트 분리 후 
+            // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
+            includeHTML('header_window', "header.html", null);
+            includeHTML('footer_window', 'footer.html',null);
+            includeHTML('btn_scroll_window','btn_scroll.html',null);
+        });
+    </script>
 </head>
 
 <body>
+    <div id="header_window"></div>
+
     <div class="wrap">
         <div class="container">
             <div class="contents-cs">
@@ -196,7 +219,7 @@
                     <p>FAQ입니다.</p>
                 </div>
                 <ul class="notice-category">
-                    <li >
+                    <li>
                         <a href="#">공지사항</a>
                     </li>
                     <li>
@@ -238,7 +261,8 @@
         </div>
         <!-- FAQ 테이블 끝 -->
     </div>
-
+    <div id="btn_scroll_window"></div>
+    <div id="footer_window"></div>
 </body>
 
 </html>
