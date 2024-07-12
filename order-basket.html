@@ -83,6 +83,8 @@
             float: left;
             list-style: none;
             text-align: center;
+        }
+        .menu-seleted {
             border: 1px solid black;
             border-bottom: 1px solid white;
         }
@@ -181,6 +183,30 @@
             includeHTML('header_window', "header.html", null);
             includeHTML('footer_window', 'footer.html', null);
             includeHTML('btn_scroll_window', 'btn_scroll.html', null);
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.menu-seleted').on('click', function () {
+                $('.menu-global').css({
+                    border: 'none',
+                    color: '#404040'
+                })
+                $(this).css({
+                    border: '1px solid black',
+                    borderBottom: '1px solid white'
+                })
+            });
+            $('.menu-global').on('click', function () {
+                $('.menu-seleted').css({
+                    border: 'none',
+                    color: '#404040'
+                })
+                $(this).css({
+                    border: '1px solid black',
+                    borderBottom: '1px solid white'
+                })
+            });
         });
     </script>
 </head>
