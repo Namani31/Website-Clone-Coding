@@ -20,6 +20,7 @@ body {
     min-width: 2000px;
 }
 .footerSize {
+    margin: 0 auto;
     width: 1600px;
 }
 .footerTop {
@@ -94,7 +95,7 @@ a.textBold {
     text-align: center;
     border: #ccc 1px solid;
     display: inline-block;
-    transition: 0.7s;
+    transition:background-color 0.7s;
 }
 .footerBox>div>a {
     color: #797979;
