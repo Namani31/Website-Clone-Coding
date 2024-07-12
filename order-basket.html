@@ -82,7 +82,7 @@
             float: left;
             list-style: none;
             text-align: center;
-            
+
         }
 
         .menu-seleted>a {
@@ -96,7 +96,7 @@
             text-decoration: none;
             color: #d3d3d3;
         }
-        
+
         .basket-empty {
             width: 1280px;
             height: 20px;
@@ -106,14 +106,21 @@
             text-align: center;
         }
 
+        .basket-list-buttons {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            text-align: center;
+            vertical-align: center;
+        }
+
         .basket-order-buttons a {
             width: 120px;
             height: 39px;
             text-decoration: none;
             padding: 10px 8px;
             font-size: 13px;
-            vertical-align: middle;
-            text-align: cetner;
         }
 
         .buttons-all-order {
@@ -130,14 +137,32 @@
             color: #fff;
             background-color: #bbb;
         }
-        
+
         .buttons-choice-order:hover {
             transition: background-position 0.3s;
             background-size: 200% 100%;
             background-image: linear-gradient(to right, #bbb 50%, #D3D3D3 50%);
             background-position: -100% 0;
         }
-        
+
+        .buttons-keep-shopping {
+            color: #222;
+            background-color: #fff;
+            border: 1px solid #111;
+            width: 100px;
+            height: 37px;
+            line-height: 30px;
+            float: right;
+        }
+
+        .buttons-keep-shopping a {
+            color: #333;
+        }
+
+        .buttons-keep-shopping:hover {
+            transition: background 0.3s;
+            background: #dddddd;
+        }
     </style>
 
     <script>
@@ -183,9 +208,13 @@
                 <p>장바구니가 비어 있습니다.</p>
             </div>
             <div class="basket-order-buttons">
-                <a class="buttons-all-order " href="#">전체상품주문</a>
-                <a class="buttons-choice-order " href="#">선택상품주문</a>
-                <span class="buttons-keep-shopping">쇼핑 계속하기</span>
+                <div class="basket-list-buttons">
+                    <a class="buttons-all-order " href="#">전체상품주문</a>
+                    <a class="buttons-choice-order " href="#">선택상품주문</a>
+                    <span class="buttons-keep-shopping">
+                        <a href="#">쇼핑 계속하기</a>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="basket-guide">
