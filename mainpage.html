@@ -25,9 +25,8 @@
         $(function () {
           // window 내부 스크립트가 있다면 스크립트 분리 후
           // includeHTML을 해당 스크립트에서 사용하고 script:src로 연결 하기
-          includeHTML("header_window", "sample-header-MR.html", null);
-          includeHTML("footer_window", "sample/sample_btn_scroll.html", null);
-          includeHTML("footer_window", "sample-footer-MR.html", null);
+          includeHTML("main_header", "main_header.html", null);
+          includeHTML("main_footer", "main_footer.html", null);
         });
       </script>
      <link rel="stylesheet" href="css/reset_plus.css">
@@ -70,114 +69,7 @@
     </style>
 </head>
 <body>
-    <div id="scroll">
-        <a href="#"><img src="images/svg/btn_quick_kakao.svg" alt="kakao"></a>
-        <a href="#"><img src="images/svg/btn_quick_top.svg" alt="top"></a>
-        <a href="#"><img src="images/svg/btn_quick_bottom.svg" alt="bottom"></a>
-    </div>
-    <!-- 헤더영역 -->
-    <div id="searchImg">
-        <div class="searchSize">
-            <div class="searchClose">
-                <img src="images/svg/btn_search_close.svg" alt="">
-            </div>
-            <div class="searchInput">
-                <input type="text" placeholder=" 검색어를 입력해주세요.">
-                <div class="inputImg">
-                    <a href="#">
-                        <img src="images/ic_header_search2.png" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="searchFav">
-                <p>인기 검색어</p>
-                <div><a href="#">토퍼</a></div>
-                <div><a href="#">베게</a></div>
-                <div><a href="#">샤워기</a></div>
-            </div>
-        </div>
-    </div>
-
-    <div id="header">
-        <!-- 헤더 상단 -->
-        <div id="header_top">
-            <a href="#">
-                <img src="images/2c8f696ba5f27ed5c5950f5660c53a79.jpg" alt="로딩" class="topBannerImg">
-                <span>카카오채널 추가시 할인쿠폰 지급
-                    <img src="images/m_ic_top_bn.png" alt="쿠폰">
-                </span>
-            </a>
-        </div>
-        <!-- 헤더 상단 끝/ 헤더 로그인 -->
-        <div id="header_bottom">
-            <div id="header_login">
-                <a href="#" class="login">로그인</a>
-                <span>ㅣ</span>
-                <a href="#" class="login">회원가입</a>
-                <span>ㅣ</span>
-                <a href="#" class="login">고객센터</a>
-            </div>
-            <div id="logo"><a href="mainpage.html"><img src="images/title_logo.png" alt=""></a></div>
-            <!-- 헤더로그인끝 -->
-         <!-- 헤더 네비 시작 -->
-            <div id="header_gnb">
-                <ul id="main_gnb">
-                    <li><a href="#">브랜드</a></li>
-                    <div>/</div>
-                    <li><a href="product-all-page1.html">all</a></li>
-                    <div>/</div>
-                    <li>
-                    <a href="#">바스</a>
-                        <ul class="gnb">
-                            <li><a href="product-all-page1.html">ALL</a></li>
-                            <li><a href="#">샤워기</a></li>
-                            <li><a href="#">싱크대</a></li>
-                            <li><a href="#">세면대</a></li>
-                            <li><a href="#">필터</a></li>
-                        </ul>
-                    </li>
-                    <div>/</div>
-                    <li>
-                    <a href="#">주방용품</a>
-                        <ul class="gnb">
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="#">도마</a></li>
-                            <li><a href="#">식기건조대</a></li>
-                        </ul>
-                    </li>
-                    <div>/</div>
-                    <li>
-                    <a href="#">리빙</a>
-                        <ul class="gnb">
-                            <li><a href="#">ALL</a></li>
-                            <li><a href="#">매트리스</a></li>
-                            <li><a href="#">토퍼</a></li>
-                            <li><a href="#">베게</a></li>
-                        </ul>    
-                    </li>
-                    <div>/</div>
-                    <li>
-                    <a href="#">CS</a>
-                        <ul class="gnb">
-                            <li><a href="#">QNA</a></li>
-                            <li><a href="#">공지사항</a></li>
-                            <li><a href="#">FAQ</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- 헤더네비끝~~ -->
-             <!-- 카트랑 검색 -->
-            <div id="cart">
-                <div class="search">
-                    <a href="#"><img src="images/svg/ic_hd_search.svg" alt="" class="imgSearch"></a>
-                    <a href="#"><img src="images/svg/ic_bag.svg" alt=""></a>
-                </div>
-            </div>
-        </div>
-        <div class="line"></div>
-    </div>
-    <!-- 헤더 검색 ~ 밑줄 -->
+    <div id="main_header"></div>
 
     <!-- 본문영역 -->
     <div id="main">
@@ -415,50 +307,7 @@
      <!-- 본문끝!!! -->
 
     <!-- 하단영역 280 300-->
-     <div id="footer">
-        <div class="footerTop">
-            <div class="footerSize">
-                <div class="footerTopLeft">
-                    <span><a href="#">회사소개</a></span>
-                    <div></div>
-                    <span><a href="#">이용약관</a></span>
-                    <div></div>
-                    <span><a href="#" class="textBold">개인정보처리방침</a></span>
-                    <div></div>
-                    <span><a href="#">이용안내</a></span>
-                </div>
-                <div class="footerTopRight"></div>
-            </div>
-        </div>
-        <div class="footerBottom">
-            <div class="footerSize">
-                <div class="footerBottomLeft">
-                    <div class="footerImg">
-                        <a href="#"><img src="images/logo.png" alt=""></a>
-                    </div>
-                    <div class="footerText">
-                        <p>(주) 퓨어셀코리아 <br>
-                            대표자 : 김철호사업자 등록번호 : 411-81-92320<br>
-                            통신판매업 신고번호 : 2020-서울강남-02095 [사업자정보확인]<br>
-                            주소 : 서울특별시 강남구 학동로101길 26 (청담동) 211호 개인정보관리책임자 : 이진희<br>
-                        </p>
-                        <address>Copyright © PURESELL 퓨어셀. All rights reserved.</address>
-                    </div>
-                </div>
-                <div class="footerBottomRight">
-                    <div class="footerCs">
-                        <h2>CS CENTER 1599-8604</h2>
-                        <p>평일 10:00 - 17:00 <br>
-                            (점심시간 : 12:00 - 13:00)<br>
-                            ​토.일.공휴일 휴무</p>
-                    </div>
-                    <div class="footerBox">
-                        <div><a href="#">1:1문의하기</a></div>
-                        <div><a href="#">자주 묻는 질문</a></div>
-                    </div>
-            </div>
-            </div>
-        </div>
-     </div>
+     <div id="main_footer"></div>
+     
 </body>
 </html>
