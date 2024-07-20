@@ -19,6 +19,8 @@ body {
 
 .title-notice {
     text-align: center;
+    margin-top: 1%;
+    margin-bottom: 2%;
 }
 
 .title-notice>p {
