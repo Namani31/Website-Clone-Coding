@@ -21,9 +21,11 @@ cs/검색/장바구니: Namani31
 
 <hr> <br> <br> <br> 
 <h1>로그인</h1>
+<img src="https://github.com/user-attachments/assets/c63a3ce1-fc2a-4706-aadf-5c34966fd96f">
+
 
 <hr> <br> <br> <br> 
 <h1>CS-QNA</h1>
-<img src="https://github.com/user-attachments/assets/027bb53f-8709-49b2-8a26-15d6529e3d01">
+<img src="https://github.com/user-attachments/assets/e9855b91-c541-477c-955c-a1550af35ef1">
 
 
