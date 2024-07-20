@@ -1,13 +1,20 @@
 # Website-Clone-Coding
-First Team Project
+<br>
 
----
+**참고한 사이트**: https://puresell.co.kr/
+<br><br>
+작업 기간: 2024. 07. 09 ~ 2024. 07. 12
 
-메인 페이지: COZY <br>
-상품 페이지: Oonet96 <br>
-로그인/회원가입/고객센터: Austine_MR <br>
-cs/검색/장바구니: Namani31
+<br>
+<hr>
 
+
+|이름|담당|깃허브 주소|
+|------|:---:|---|
+|COZY|메인 페이지, 검색, 장바구니|https://github.com/cozyiscat|
+|Oonet96|바스, 주방용품, 리빙|https://github.com/Oonet96|
+|Austine_MR|로그인, 회원가입, 고객센터|https://github.com/AustinePP90|
+|Namani31|CS-QNA, 공지사항, FAQ|https://github.com/Namani31|
 ---
 <br>
 <br>
